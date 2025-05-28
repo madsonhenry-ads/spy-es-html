@@ -4,7 +4,7 @@ geoIpLookup: function(success, failure) {
         .done(function(resp) {
             var countryCode = (resp && resp.country) ? resp.country : "";
             if (countryCode) {
-                console.log("Geolocalização via ipinfo.io: " + countryCode);
+                console.log("Geolocalización vía ipinfo.io: " + countryCode);
                 success(countryCode);
             } else {
                 // Método 2: ip-api.com (alternativa para Android)
@@ -24,7 +24,7 @@ geoIpLookup: function(success, failure) {
             dataType: 'json',
             success: function(data) {
                 if (data && data.countryCode) {
-                    console.log("Geolocalização via ip-api.com: " + data.countryCode);
+                    console.log("Geolocalización vía ip-api.com: " + data.countryCode);
                     success(data.countryCode.toLowerCase());
                 } else {
                     // Método 3: geoplugin (segunda alternativa)
@@ -46,17 +46,17 @@ geoIpLookup: function(success, failure) {
             dataType: 'json',
             success: function(data) {
                 if (data && data.geoplugin_countryCode) {
-                    console.log("Geolocalização via geoplugin: " + data.geoplugin_countryCode);
+                    console.log("Geolocalización vía geoplugin: " + data.geoplugin_countryCode);
                     success(data.geoplugin_countryCode.toLowerCase());
                 } else {
                     // Falha em todos os métodos - usar padrão (EUA)
-                    console.log("Geolocalização falhou, usando padrão: us");
+                    console.log("Geolocalización fallida, usando predeterminado: us");
                     success('us');
                 }
             },
             error: function() {
                 // Falha em todos os métodos - usar padrão (EUA)
-                console.log("Geolocalização falhou, usando padrão: us");
+                console.log("Geolocalización fallida, usando predeterminado: us");
                 success('us');
             }
         });

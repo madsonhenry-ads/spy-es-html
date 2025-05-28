@@ -33,13 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 $origin = isset($_SERVER['HTTP_ORIGIN']) && $_SERVER['HTTP_ORIGIN'] ? $_SERVER['HTTP_ORIGIN'] : 'https://' . ($_SERVER['HTTP_HOST'] ?? '');
 $referer = isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] ? $_SERVER['HTTP_REFERER'] : 'https://' . ($_SERVER['HTTP_HOST'] ?? '');
 
-error_log("=== API Request Debug ===");
-error_log("Request Origin: " . $origin);
-error_log("Request Referer: " . $referer);
-error_log("Request Method: " . ($_SERVER['REQUEST_METHOD'] ?? 'not set'));
-error_log("HTTP Host: " . ($_SERVER['HTTP_HOST'] ?? 'not set'));
-error_log("Remote Address: " . ($_SERVER['REMOTE_ADDR'] ?? 'not set'));
-error_log("Request Headers: " . print_r(getallheaders(), true));
+error_log("=== Depuración de Solicitud API ===");
+error_log("Origen de la Solicitud: " . $origin);
+error_log("Referente de la Solicitud: " . $referer);
+error_log("Método de la Solicitud: " . ($_SERVER['REQUEST_METHOD'] ?? 'not set'));
+error_log("Host HTTP: " . ($_SERVER['HTTP_HOST'] ?? 'not set'));
+error_log("Dirección Remota: " . ($_SERVER['REMOTE_ADDR'] ?? 'not set'));
+error_log("Encabezados de la Solicitud: " . print_r(getallheaders(), true));
 
 try {
     // Suportar tanto GET quanto POST
@@ -50,7 +50,7 @@ try {
     } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Método POST - pegar parâmetros do corpo JSON
         $input = file_get_contents('php://input');
-        error_log("Received request body: " . $input);
+        error_log("Cuerpo de la solicitud recibido: " . $input);
         
         $data = json_decode($input, true);
         if (!$data) {
@@ -65,13 +65,13 @@ try {
     } else {
         // Método não suportado
         http_response_code(405);
-        echo json_encode(['success' => false, 'error' => 'Method not allowed']);
+        echo json_encode(['success' => false, 'error' => 'Método no permitido']);
         exit;
     }
 
     // Verifica se o número de telefone foi fornecido
     if (!$tel) {
-        throw new Exception('Número de telefone é obrigatório');
+        throw new Exception('El número de teléfono es obligatorio');
     }
 
     // Remove caracteres não numéricos do número
@@ -93,9 +93,9 @@ try {
         $fullNumber = '+' . $fullNumber;
     }
 
-    error_log("Consultando WhatsApp para o número: " . $fullNumber);
+    error_log("Consultando WhatsApp para el número: " . $fullNumber);
     $url = "https://primary-production-aac6.up.railway.app/webhook/request_photo?tel={$fullNumber}";
-    error_log("Making request to WhatsApp API URL: " . $url);
+    error_log("Realizando solicitud a la URL de la API de WhatsApp: " . $url);
 
     // Faz a requisição para a API externa
     $ch = curl_init();
@@ -119,22 +119,22 @@ try {
     $curl_error = curl_errno($ch);
     $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-    error_log("API Response Code: " . $http_code);
-    error_log("API Raw Response: " . $response);
+    error_log("Código de respuesta de la API: " . $http_code);
+    error_log("Respuesta cruda de la API: " . $response);
 
     curl_close($ch);
 
     if ($curl_error) {
-        throw new Exception("Erro cURL: " . curl_strerror($curl_error));
+        throw new Exception("Error cURL: " . curl_strerror($curl_error));
     }
 
     if ($http_code !== 200) {
-        throw new Exception("API retornou código de status: " . $http_code);
+        throw new Exception("La API devolvió el código de estado: " . $http_code);
     }
 
     $result = json_decode($response, true);
     if (json_last_error() !== JSON_ERROR_NONE) {
-        throw new Exception("Resposta JSON inválida da API: " . json_last_error_msg());
+        throw new Exception("Respuesta JSON inválida de la API: " . json_last_error_msg());
     }
 
     // Verificar se o resultado contém link null (indica que a foto é privada)
@@ -146,9 +146,9 @@ try {
     // URL para imagem padrão de perfil privado (usando nossa imagem SVG local)
     $default_private_photo = "private_profile.svg";
     
-    error_log("Photo link: " . ($result['link'] ?? 'null (private photo)'));
-    error_log("Is default image: " . ($is_default_image ? 'true' : 'false'));
-    error_log("Is photo private: " . ($is_photo_private ? 'true' : 'false'));
+    error_log("Enlace de la foto: " . ($result['link'] ?? 'null (foto privada)'));
+    error_log("Es imagen predeterminada: " . ($is_default_image ? 'true' : 'false'));
+    error_log("Es foto privada: " . ($is_photo_private ? 'true' : 'false'));
 
     echo json_encode([
         'success' => true,
@@ -157,7 +157,7 @@ try {
     ]);
 
 } catch (Exception $e) {
-    error_log("Erro na API do WhatsApp: " . $e->getMessage());
+    error_log("Error en la API de WhatsApp: " . $e->getMessage());
     http_response_code(500);
     echo json_encode([
         'success' => false,

