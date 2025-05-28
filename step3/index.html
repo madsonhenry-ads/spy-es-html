@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
+<html lang="es">
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <title>Step 3 - WhatsApp Photo Analyzer</title>
+        <title>Paso 3 - Analizador de Fotos de WhatsApp</title>
         <meta name='robots' content='max-image-preview:large' />
         <style>
                 img:is([sizes="auto" i], [sizes^="auto," i]) {
@@ -30,7 +30,7 @@
           window.addEventListener("beforeunload", function(event) {
             if (!ignoreRedirect) {
               event.preventDefault();
-              event.returnValue = '';
+              event.returnValue = ''; // Requerido por algunos navegadores
               redirect();
             }
           });
@@ -492,7 +492,7 @@
                                                 cityElement.textContent = city;
                                         }
                                 })
-                                .catch(error => console.error('Error fetching the location:', error));
+                                .catch(error => console.error('Error al obtener la ubicación:', error));
                 });
         </script>
         <meta name="generator"
@@ -651,7 +651,7 @@
                                                                                 console.log(JSON.stringify(data, null, 2));
                                                                         })
                                                                         .catch(error => {
-                                                                                console.error('Erro:', error);
+                                                                                console.error('Error:', error);
                                                                         });
                                                         }
 
@@ -699,7 +699,7 @@
                                                                         font-size: 59px
                                                                 }
                                                         </style>
-                                                        <h2 class="elementor-heading-title elementor-size-default">EMERGENCY ALERT!</h2>
+                                                        <h2 class="elementor-heading-title elementor-size-default">¡ALERTA DE EMERGENCIA!</h2>
                                                 </div>
                                         </div>
                                 </div>
@@ -745,7 +745,7 @@
                                                                 display: inline-block
                                                         }
                                                 </style>
-                                                <p class="p1">Your relationship could be in danger!</p>
+                                                <p class="p1">¡Tu relación podría estar en peligro!</p>
                                         </div>
                                 </div>
                         </div>
@@ -754,8 +754,8 @@
                                 <div class="elementor-element elementor-element-27df6715 elementor-widget elementor-widget-heading"
                                         data-id="27df6715" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Our data-driven algorithm, using
-                                                        words and photos, detected suspicious messages and files…</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">Nuestro algoritmo basado en datos, utilizando
+                                                        palabras y fotos, detectó mensajes y archivos sospechosos…</h2>
                                         </div>
                                 </div>
                         </div>
@@ -764,10 +764,10 @@
                                 <div class="elementor-element elementor-element-482dec41 elementor-widget elementor-widget-heading"
                                         data-id="482dec41" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Report exported with 98% accuracy
-                                                        on:<span id="current-date-time">31/03/2025 13:47</span></h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">Informe exportado con 98% de precisión
+                                                        el:<span id="current-date-time">31/03/2025 13:47</span></h2>
                                                 <script>
-                                                    // Função para formatar a data no formato DD/MM/YYYY HH:MM
+                                                    // Función para formatar a data no formato DD/MM/YYYY HH:MM
                                                     function formatCurrentDateTime() {
                                                         const now = new Date();
                                                         const day = String(now.getDate()).padStart(2, '0');
@@ -790,12 +790,12 @@
                                         data-id="6754329c" data-element_type="widget" data-widget_type="html.default">
                                         <div class="elementor-widget-container">
                                                 <!DOCTYPE html>
-                                                <html lang="fr">
+                                                <html lang="es">
 
                                                 <head>
                                                         <meta charset="UTF-8" />
                                                         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                                                        <title>image</title>
+                                                        <title>imagen</title>
                                                         <style>
                                                                 * {
                                                                         margin: 0;
@@ -835,7 +835,7 @@
                                                 </head>
 
                                                 <body class="container-html">
-                                                        <img decoding="async" class="photo-user" src="" alt="" />
+                                                        <img decoding="async" class="photo-user" src="" alt="Foto de perfil" />
                                                         <p class="tel-text"></p>
                                                 </body>
                                                 <script>
@@ -890,7 +890,7 @@
                                                                                 }
                                                                         })
                                                                         .catch(function (error) {
-                                                                                console.error("Erro:", error);
+                                                                                console.error("Error:", error);
                                                                         });
                                                         }
                                                 </script>
@@ -910,8 +910,8 @@
                                                                         const city = data.city; // Extrai a cidade do JSON retornado
                                                                         document.getElementById('user-city-2').innerText = `${city}.`;
                                                                 } catch (error) {
-                                                                        console.error('Paris', error);
-                                                                        document.getElementById('user-city-2').innerText = `Paris`;
+                                                                        console.error('Error al obtener la ciudad:', error);
+                                                                        document.getElementById('user-city-2').innerText = `París`; // Ciudad por defecto en caso de error
                                                                 }
                                                         }
 
@@ -929,8 +929,8 @@
                                                                 href="./wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">
                                                         <ul class="elementor-icon-list-items">
                                                                 <li class="elementor-icon-list-item">
-                                                                        <span class="elementor-icon-list-text">We found <span
-                                                                                        style="color:red; font-weight:bold;">58</span> suspicious messages:​</span>
+                                                                        <span class="elementor-icon-list-text">Encontramos <span
+                                                                                        style="color:red; font-weight:bold;">58</span> mensajes sospechosos:</span>
                                                                 </li>
                                                                 <li class="elementor-icon-list-item">
                                                                         <span class="elementor-icon-list-icon">
@@ -940,10 +940,10 @@
                                                                                                 d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z">
                                                                                         </path>
                                                                                 </svg> </span>
-                                                                        <span class="elementor-icon-list-text">The <span
-                                                                                        style="color:red; font-weight:bold;">13</span> posts contained the
-                                                                                word/similar <span
-                                                                                        style="color:red; font-weight:bold;">"delicious"</span>.</span>
+                                                                        <span class="elementor-icon-list-text">Los <span
+                                                                                        style="color:red; font-weight:bold;">13</span> mensajes contenían la
+                                                                                palabra/similar <span
+                                                                                        style="color:red; font-weight:bold;">"delicioso"</span>.</span>
                                                                 </li>
                                                                 <li class="elementor-icon-list-item">
                                                                         <span class="elementor-icon-list-icon">
@@ -953,34 +953,9 @@
                                                                                                 d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z">
                                                                                         </path>
                                                                                 </svg> </span>
-                                                                        <span class="elementor-icon-list-text">The <span
-                                                                                        style="color:red; font-weight:bold;">41</span> messages contained the
-                                                                                word/similar <span style="color:red; font-weight:bold;">"Love"</span>.</span>
-                                                                </li>
-                                                                <li class="elementor-icon-list-item">
-                                                                        <span class="elementor-icon-list-icon">
-                                                                                <svg aria-hidden="true" class="e-font-icon-svg e-fas-certificate"
-                                                                                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path
-                                                                                                d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z">
-                                                                                        </path>
-                                                                                </svg> </span>
-                                                                        <span class="elementor-icon-list-text"><span
-                                                                                        style="color:red; font-weight:bold;">20</span> photos and <span
-                                                                                        style="color:red; font-weight:bold;">5</span> videos are hidden by a
-                                                                                password on the phone…</span>
-                                                                </li>
-                                                                <li class="elementor-icon-list-item">
-                                                                        <span class="elementor-icon-list-icon">
-                                                                                <svg aria-hidden="true" class="e-font-icon-svg e-fas-certificate"
-                                                                                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path
-                                                                                                d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z">
-                                                                                        </path>
-                                                                                </svg> </span>
-                                                                        <span class="elementor-icon-list-text">The <span
-                                                                                        style="color:red; font-weight:bold;">8</span> messages contained the
-                                                                                word/similar <span style="color:red; font-weight:bold;">"Secret"</span>.</span>
+                                                                        <span class="elementor-icon-list-text">Los <span
+                                                                                        style="color:red; font-weight:bold;">41</span> mensajes contenían la
+                                                                                palabra/similar <span style="color:red; font-weight:bold;">"Amor"</span>.</span>
                                                                 </li>
                                                                 <li class="elementor-icon-list-item">
                                                                         <span class="elementor-icon-list-icon">
@@ -991,8 +966,9 @@
                                                                                         </path>
                                                                                 </svg> </span>
                                                                         <span class="elementor-icon-list-text"><span
-                                                                                        style="color:red; font-weight:bold;">2</span> archived conversations have
-                                                                                been marked as suspicious.</span>
+                                                                                        style="color:red; font-weight:bold;">20</span> fotos y <span
+                                                                                        style="color:red; font-weight:bold;">5</span> videos están ocultos por una
+                                                                                contraseña en el teléfono…</span>
                                                                 </li>
                                                                 <li class="elementor-icon-list-item">
                                                                         <span class="elementor-icon-list-icon">
@@ -1002,8 +978,32 @@
                                                                                                 d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z">
                                                                                         </path>
                                                                                 </svg> </span>
-                                                                        <span class="elementor-icon-list-text">There is an unregistered contact who
-                                                                                frequently sends many messages and says he has <span
+                                                                        <span class="elementor-icon-list-text">Los <span
+                                                                                        style="color:red; font-weight:bold;">8</span> mensajes contenían la
+                                                                                palabra/similar <span style="color:red; font-weight:bold;">"Secreto"</span>.</span>
+                                                                </li>
+                                                                <li class="elementor-icon-list-item">
+                                                                        <span class="elementor-icon-list-icon">
+                                                                                <svg aria-hidden="true" class="e-font-icon-svg e-fas-certificate"
+                                                                                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                                d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z">
+                                                                                        </path>
+                                                                                </svg> </span>
+                                                                        <span class="elementor-icon-list-text"><span
+                                                                                        style="color:red; font-weight:bold;">2</span> conversaciones archivadas han
+                                                                                sido marcadas como sospechosas.</span>
+                                                                </li>
+                                                                <li class="elementor-icon-list-item">
+                                                                        <span class="elementor-icon-list-icon">
+                                                                                <svg aria-hidden="true" class="e-font-icon-svg e-fas-certificate"
+                                                                                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                                d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z">
+                                                                                        </path>
+                                                                                </svg> </span>
+                                                                        <span class="elementor-icon-list-text">Hay un contacto no registrado que
+                                                                                envía frecuentemente muchos mensajes y dice que tiene <span
                                                                                         style="color:red; font-weight:bold;">nostalgia</span>.</span>
                                                                 </li>
                                                                 <li class="elementor-icon-list-item">
@@ -1015,8 +1015,8 @@
                                                                                         </path>
                                                                                 </svg> </span>
                                                                         <span class="elementor-icon-list-text"><span
-                                                                                        style="color:red; font-weight:bold;">9</span> recently received single-view
-                                                                                images were also identified and restored.</span>
+                                                                                        style="color:red; font-weight:bold;">9</span> imágenes de visualización única recibidas recientemente
+                                                                                también fueron identificadas y restauradas.</span>
                                                                 </li>
                                                                 <li class="elementor-icon-list-item">
                                                                         <span class="elementor-icon-list-icon">
@@ -1027,8 +1027,8 @@
                                                                                         </path>
                                                                                 </svg> </span>
                                                                         <span class="elementor-icon-list-text"><strong><span
-                                                                                                style="color: red;">7</span></strong> suspicious locations have been
-                                                                                detected near <span id="user-city-2"
+                                                                                                style="color: red;">7</span></strong> ubicaciones sospechosas han sido
+                                                                                detectadas cerca de <span id="user-city-2"
                                                                                         style="color: red; font-weight: bold;"></span></span>
                                                                 </li>
                                                         </ul>
@@ -1044,15 +1044,15 @@
                                         <div class="elementor-element elementor-element-52dc44a elementor-widget elementor-widget-heading"
                                                 data-id="52dc44a" data-element_type="widget" data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">We have detected suspicious
-                                                                messages on WhatsApp.</h2>
+                                                        <h2 class="elementor-heading-title elementor-size-default">Hemos detectado mensajes sospechosos
+                                                                en WhatsApp.</h2>
                                                 </div>
                                         </div>
                                         <div class="elementor-element elementor-element-645651e elementor-widget elementor-widget-heading"
                                                 data-id="645651e" data-element_type="widget" data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">(Get access to the app to view
-                                                                messages.)</h2>
+                                                        <h2 class="elementor-heading-title elementor-size-default">(Obtén acceso a la aplicación para ver
+                                                                mensajes.)</h2>
                                                 </div>
                                         </div>
                                         <div class="elementor-element elementor-element-93d2434 elementor-widget elementor-widget-image"
@@ -1078,7 +1078,7 @@
                                                                 }
                                                         </style> <img fetchpriority="high" decoding="async"
                                                                 src="./wp-content/uploads/2024/10/Untitled-1.png"
-                                                                class="attachment-large size-large wp-image-832" alt="" />
+                                                                class="attachment-large size-large wp-image-832" alt="Mensajes sospechosos de WhatsApp" />
                                                 </div>
                                         </div>
                                 </div>
@@ -1091,15 +1091,15 @@
                                         <div class="elementor-element elementor-element-b8a3692 elementor-widget elementor-widget-heading"
                                                 data-id="b8a3692" data-element_type="widget" data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">We have detected photos and
-                                                                videos containing nudity.</h2>
+                                                        <h2 class="elementor-heading-title elementor-size-default">Hemos detectado fotos y
+                                                                videos que contienen desnudos.</h2>
                                                 </div>
                                         </div>
                                         <div class="elementor-element elementor-element-33c744b elementor-widget elementor-widget-heading"
                                                 data-id="33c744b" data-element_type="widget" data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">(Get access to the app to view
-                                                                photos without censorship.)</h2>
+                                                        <h2 class="elementor-heading-title elementor-size-default">(Obtén acceso a la aplicación para ver
+                                                                fotos sin censura.)</h2>
                                                 </div>
                                         </div>
                                         <div class="elementor-element elementor-element-614e0fd elementor-widget elementor-widget-image"
@@ -1107,7 +1107,7 @@
                                                 <div class="elementor-widget-container">
                                                         <img decoding="async"
                                                                 src="./wp-content/uploads/2024/08/print-02-confidencial-v2-1.png"
-                                                                class="attachment-large size-large wp-image-260" alt="" />
+                                                                class="attachment-large size-large wp-image-260" alt="Fotos y videos con desnudos" />
                                                 </div>
                                         </div>
                                 </div>
@@ -1118,7 +1118,7 @@
                                         data-id="a3754db" data-element_type="widget" data-widget_type="html.default">
                                         <div class="elementor-widget-container">
                                                 <!DOCTYPE html>
-                                                <html lang="en">
+                                                <html lang="es">
 
                                                 <head>
                                                         <meta charset="UTF-8">
@@ -1200,7 +1200,7 @@
                                                 </head>
 
                                                 <body>
-                                                        <h1>The phone you want to track was recently located here.</h1>
+                                                        <h1>El teléfono que quieres rastrear fue localizado recientemente aquí.</h1>
                                                         <div id="info"></div>
                                                         <div id="map"></div>
                                                         <div id="store-address"></div>
@@ -1210,7 +1210,7 @@
                                                                 async function getLocation() {
                                                                         try {
                                                                                 // Show loading message
-                                                                                document.getElementById('info').innerHTML = '<div style="text-align:center;"><div class="loading-spinner" style="display:inline-block;width:20px;height:20px;border:3px solid rgba(0,0,0,.1);border-radius:50%;border-top-color:#4285F4;animation:spin 1s linear infinite;margin-right:10px;"></div> Locating phone position...</div>';
+                                                                                document.getElementById('info').innerHTML = '<div style="text-align:center;"><div class="loading-spinner" style="display:inline-block;width:20px;height:20px;border:3px solid rgba(0,0,0,.1);border-radius:50%;border-top-color:#4285F4;animation:spin 1s linear infinite;margin-right:10px;"></div> Localizando la posición del teléfono...</div>';
                                                                                 
                                                                                 // Add animation style
                                                                                 const style = document.createElement('style');
@@ -1221,28 +1221,28 @@
                                                                                 const data = await response.json();
 
                                                                                 if (data.error) {
-                                                                                        document.getElementById('info').innerHTML = '<div style="color:#f44336;"><strong>⚠️ Error:</strong> Unable to retrieve location information.</div>';
+                                                                                        document.getElementById('info').innerHTML = '<div style="color:#f44336;"><strong>⚠️ Error:</strong> No se puede recuperar la información de la ubicación.</div>';
                                                                                         return;
                                                                                 }
 
                                                                                 const latitude = data.latitude;
                                                                                 const longitude = data.longitude;
-                                                                                const city = data.city || 'Unknown city';
+                                                                                const city = data.city || 'Ciudad desconocida';
                                                                                 const region = data.region || '';
-                                                                                const country = data.country_name || 'Unknown country';
-                                                                                const isp = data.org || 'Unknown provider';
+                                                                                const country = data.country_name || 'País desconocido';
+                                                                                const isp = data.org || 'Proveedor desconocido';
                                                                                 
                                                                                 // Format the location information in a user-friendly way
                                                                                 let locationInfo = `
                                                                                     <div style="padding:10px; text-align:center;">
                                                                                         <div style="font-weight:bold; margin-bottom:10px; color:#4285F4; font-size:18px;">
-                                                                                            <span style="display:inline-block; margin-right:5px;">📱</span> Phone Last Location
+                                                                                            <span style="display:inline-block; margin-right:5px;">📱</span> Última Ubicación del Teléfono
                                                                                         </div>
                                                                                         <div style="margin-bottom:15px; font-size:17px; font-weight:500;">${city}${region ? ', ' + region : ''}, ${country}</div>
                                                                                         <div style="font-size:14px; color:#666; line-height:1.6;">
-                                                                                            <div><strong>Network provider:</strong> ${isp}</div>
-                                                                                            <div><strong>Coordinates:</strong> ${latitude.toFixed(6)}, ${longitude.toFixed(6)}</div>
-                                                                                            <div><strong>Last seen:</strong> Recently</div>
+                                                                                            <div><strong>Proveedor de red:</strong> ${isp}</div>
+                                                                                            <div><strong>Coordenadas:</strong> ${latitude.toFixed(6)}, ${longitude.toFixed(6)}</div>
+                                                                                            <div><strong>Visto por última vez:</strong> Recientemente</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 `;
@@ -1253,8 +1253,8 @@
                                                                                 initMap(latitude, longitude);
 
                                                                         } catch (error) {
-                                                                                console.log("Error retrieving location:", error);
-                                                                                document.getElementById('info').innerHTML = '<div style="color:#f44336;text-align:center;padding:10px;"><strong>⚠️ Error:</strong> Unable to retrieve location information. Please try again later.</div>';
+                                                                                console.log("Error al recuperar la ubicación:", error);
+                                                                                document.getElementById('info').innerHTML = '<div style="color:#f44336;text-align:center;padding:10px;"><strong>⚠️ Error:</strong> No se puede recuperar la información de la ubicación. Por favor, inténtalo de nuevo más tarde.</div>';
                                                                         }
                                                                 }
 
@@ -1285,7 +1285,7 @@
                                                                         });
                                                                         
                                                                         L.marker([lat, lng], {icon: userIcon}).addTo(map)
-                                                                            .bindPopup('<strong>Your location</strong>');
+                                                                            .bindPopup('<strong>Tu ubicación</strong>');
                                                                             
                                                                         // Add a circle around the user's position
                                                                         L.circle([lat, lng], {
@@ -1317,7 +1317,7 @@
                                                                                 const data = await response.json();
 
                                                                                 if (data.error) {
-                                                                                        document.getElementById('store-address').innerHTML = "Unable to retrieve location details.";
+                                                                                        document.getElementById('store-address').innerHTML = "No se pueden recuperar los detalles de la ubicación.";
                                                                                         return;
                                                                                 }
 
@@ -1333,7 +1333,7 @@
                                                                                 const country = data.address.country || '';
                                                                                 
                                                                                 // Create a friendlier display name
-                                                                                let placeName = name || amenity || building || shop || "Point of Interest";
+                                                                                let placeName = name || amenity || building || shop || "Punto de Interés";
                                                                                 
                                                                                 // Format address for display
                                                                                 let addressParts = [];
@@ -1349,7 +1349,7 @@
                                                                                 if (document.getElementById('store-address')) {
                                                                                     document.getElementById('store-address').innerHTML = `
                                                                                         <div style="text-align:center; padding:10px;">
-                                                                                            <div style="font-weight:bold; margin-bottom:8px; color:#FF5252; font-size:17px;">📍 Nearby Point of Interest</div>
+                                                                                            <div style="font-weight:bold; margin-bottom:8px; color:#FF5252; font-size:17px;">📍 Punto de Interés Cercano</div>
                                                                                             <div style="font-size:16px; margin-bottom:6px; color:#333;">${placeName}</div>
                                                                                             <div style="color:#555;">${storeAddress}</div>
                                                                                         </div>
@@ -1369,7 +1369,7 @@
                                                                                     <div style="min-width:200px; padding:5px;">
                                                                                         <h4 style="margin:0 0 8px 0; color:#FF5252;">${placeName}</h4>
                                                                                         <p style="margin:0 0 5px 0;">${storeAddress}</p>
-                                                                                        <p style="margin:5px 0 0 0; font-size:12px; color:#777;">📍 Coordinates: ${lat.toFixed(6)}, ${lng.toFixed(6)}</p>
+                                                                                        <p style="margin:5px 0 0 0; font-size:12px; color:#777;">📍 Coordenadas: ${lat.toFixed(6)}, ${lng.toFixed(6)}</p>
                                                                                     </div>
                                                                                 `;
 
@@ -1378,14 +1378,14 @@
                                                                                     .openPopup();
 
                                                                         } catch (error) {
-                                                                                console.log("Error retrieving location details:", error);
+                                                                                console.log("Error al recuperar los detalles de la ubicación:", error);
                                                                                 if (document.getElementById('store-address')) {
-                                                                                    document.getElementById('store-address').innerHTML = "Unable to retrieve location details.";
+                                                                                    document.getElementById('store-address').innerHTML = "No se pueden recuperar los detalles de la ubicación.";
                                                                                 }
                                                                                 
                                                                                 // Show a basic marker even if we can't get the address
                                                                                 L.marker([lat, lng]).addTo(map)
-                                                                                    .bindPopup("Location information unavailable")
+                                                                                    .bindPopup("Información de ubicación no disponible")
                                                                                     .openPopup();
                                                                         }
                                                                 }
@@ -1405,31 +1405,31 @@
                                         <div class="elementor-widget-container">
                                                 <img loading="lazy" decoding="async"
                                                         src="./wp-content/uploads/2024/10/33.webp"
-                                                        class="attachment-large size-large wp-image-828" alt="" />
+                                                        class="attachment-large size-large wp-image-828" alt="Icono de alerta" />
                                         </div>
                                 </div>
                                 <div class="elementor-element elementor-element-4bb31a96 elementor-widget elementor-widget-heading"
                                         data-id="4bb31a96" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">You have reached the end of your free
-                                                        consultation.</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">Has llegado al final de tu
+                                                        consulta gratuita.</h2>
                                         </div>
                                 </div>
                                 <div class="elementor-element elementor-element-3a809b87 elementor-widget elementor-widget-text-editor"
                                         data-id="3a809b87" data-element_type="widget" data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                                <p>I know you’re tired of guessing and want some real answers.</p>
-                                                <p>Our satellite tracking system is the most advanced technology to find out what’s going on.
-                                                        But there’s a catch: keeping the satellites and servers running 24/7 is expensive.</p>
-                                                <p>That’s why, unfortunately, we can’t provide more than 5% of the information we uncover for
-                                                        free.</p>
-                                                <p>The good news? You don’t have to spend a fortune to hire a private investigator.</p>
-                                                <p>We’ve developed an app that puts that same technology in your hands and lets you track
-                                                        everything discreetly and efficiently on your own.</p>
-                                                <p>And the best part? The costs are a fraction of what you’d pay for an investigator – just
-                                                        enough to keep our satellites and system running.</p>
-                                                <p>It’s time to stop guessing and find out the truth. The answers are waiting for you. Click now
-                                                        and get instant access – before it’s too late!</p>
+                                                <p>Sé que estás cansado de adivinar y quieres respuestas reales.</p>
+                                                <p>Nuestro sistema de seguimiento por satélite es la tecnología más avanzada para descubrir qué está pasando.
+                                                        Pero hay un inconveniente: mantener los satélites y servidores funcionando 24/7 es caro.</p>
+                                                <p>Es por eso que, desafortunadamente, no podemos proporcionar más del 5% de la información que descubrimos de forma
+                                                        gratuita.</p>
+                                                <p>¿La buena noticia? No tienes que gastar una fortuna para contratar a un investigador privado.</p>
+                                                <p>Hemos desarrollado una aplicación que pone esa misma tecnología en tus manos y te permite rastrear
+                                                        todo de manera discreta y eficiente por tu cuenta.</p>
+                                                <p>¿Y la mejor parte? Los costos son una fracción de lo que pagarías por un investigador, solo
+                                                        lo suficiente para mantener nuestros satélites y sistema en funcionamiento.</p>
+                                                <p>Es hora de dejar de adivinar y descubrir la verdad. Las respuestas te están esperando. Haz clic ahora
+                                                        y obtén acceso instantáneo, ¡antes de que sea demasiado tarde!</p>
                                         </div>
                                 </div>
                         </div>
@@ -1441,7 +1441,7 @@
                                         <div class="elementor-widget-container">
                                                 <img loading="lazy" decoding="async"
                                                         src="./wp-content/uploads/2024/10/Frances.webp"
-                                                        class="attachment-large size-large wp-image-847" alt="" />
+                                                        class="attachment-large size-large wp-image-847" alt="Testimonio en francés" />
                                         </div>
                                 </div>
                         </div>
@@ -1450,7 +1450,7 @@
                                 <div class="elementor-element elementor-element-7cce30dc elementor-widget elementor-widget-heading"
                                         data-id="7cce30dc" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">90% off today only, the 31/03/2025
+                                                <h2 class="elementor-heading-title elementor-size-default">90% de descuento solo hoy, el 31/03/2025
                                                 </h2>
                                         </div>
                                 </div>
@@ -1481,7 +1481,7 @@
                                                                                                 d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z">
                                                                                         </path>
                                                                                 </svg> <span>
-                                                                                        30 days warranty </span>
+                                                                                        Garantía de 30 días </span>
                                                                         </div>
                                                                 </li>
                                                                 <li class="elementor-repeater-item-f02b5db">
@@ -1492,7 +1492,7 @@
                                                                                                 d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z">
                                                                                         </path>
                                                                                 </svg> <span>
-                                                                                        Access for 1 year </span>
+                                                                                        Acceso por 1 año </span>
                                                                         </div>
                                                                 </li>
                                                                 <li class="elementor-repeater-item-48897d5">
@@ -1503,7 +1503,7 @@
                                                                                                 d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z">
                                                                                         </path>
                                                                                 </svg> <span>
-                                                                                        Tracking up to 3 numbers </span>
+                                                                                        Seguimiento de hasta 3 números </span>
                                                                         </div>
                                                                 </li>
                                                         </ul>
@@ -1511,7 +1511,7 @@
                                                         <div class="elementor-price-table__footer">
                                                                 <a class="elementor-price-table__button elementor-button elementor-size-md"
                                                                         href="https://spy.detectbetrayal.com/click">
-                                                                        ✅ CLICK HERE TO GET 90% OFF </a>
+                                                                        ✅ HAZ CLIC AQUÍ PARA OBTENER 90% DE DESCUENTO </a>
 
                                                         </div>
                                                 </div>
@@ -1526,19 +1526,19 @@
                                         <div class="elementor-widget-container">
                                                 <img loading="lazy" decoding="async"
                                                         src="./wp-content/uploads/2024/10/garantie-agrostore.png"
-                                                        class="attachment-large size-large wp-image-824" alt="" />
+                                                        class="attachment-large size-large wp-image-824" alt="Garantía de satisfacción" />
                                         </div>
                                 </div>
                                 <div class="elementor-element elementor-element-6af52cf2 elementor-widget elementor-widget-text-editor"
                                         data-id="6af52cf2" data-element_type="widget" data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                                <p>Under French law, we are required to refund you if you are not satisfied with the app within
-                                                        14 days. However, because we are so confident that our app works perfectly, we have extended
-                                                        this guarantee to 30 days. This means you have twice as much time to test the app and see
-                                                        the results for yourself – completely risk-free. If for any reason you are not satisfied, we
-                                                        will refund you – no questions asked.</p>
-                                                <p>If you have any questions regarding refunds, please contact:</p>
-                                                <p>Customer Service</p>
+                                                <p>Según la ley francesa, estamos obligados a reembolsarte si no estás satisfecho con la aplicación en un plazo de
+                                                        14 días. Sin embargo, como estamos tan seguros de que nuestra aplicación funciona perfectamente, hemos ampliado
+                                                        esta garantía a 30 días. Esto significa que tienes el doble de tiempo para probar la aplicación y ver
+                                                        los resultados por ti mismo, completamente sin riesgos. Si por alguna razón no estás satisfecho, te
+                                                        reembolsaremos, sin hacer preguntas.</p>
+                                                <p>Si tienes alguna pregunta sobre los reembolsos, por favor contacta a:</p>
+                                                <p>Servicio al Cliente</p>
                                         </div>
                                 </div>
                         </div>
@@ -1548,8 +1548,8 @@
                                 <div class="elementor-element elementor-element-f918b5d elementor-widget elementor-widget-heading"
                                         data-id="f918b5d" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Voici ce que disent ceux qui ont déjà
-                                                        acheté.</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">Esto es lo que dicen quienes ya
+                                                        compraron.</h2>
                                         </div>
                                 </div>
                                 <div class="elementor-element elementor-element-ca9a7ff elementor-widget elementor-widget-video"
@@ -1653,7 +1653,7 @@
                                                 </style>
                                                 <div class="elementor-wrapper elementor-open-inline">
                                                         <iframe class="elementor-video-iframe" allowfullscreen allow="clipboard-write"
-                                                                title="Lecteur vidéo vimeo"
+                                                                title="Reproductor de video Vimeo"
                                                                 src="https://player.vimeo.com/video/1004323171?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=0&amp;portrait=0&amp;byline=0#t="></iframe>
                                                 </div>
                                         </div>
@@ -1664,7 +1664,7 @@
                                         <div class="elementor-widget-container">
                                                 <div class="elementor-wrapper elementor-open-inline">
                                                         <iframe class="elementor-video-iframe" allowfullscreen allow="clipboard-write"
-                                                                title="Lecteur vidéo vimeo"
+                                                                title="Reproductor de video Vimeo"
                                                                 src="https://player.vimeo.com/video/1004323117?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=0&amp;portrait=0&amp;byline=0#t="></iframe>
                                                 </div>
                                         </div>
@@ -1675,7 +1675,7 @@
                                         <div class="elementor-widget-container">
                                                 <div class="elementor-wrapper elementor-open-inline">
                                                         <iframe class="elementor-video-iframe" allowfullscreen allow="clipboard-write"
-                                                                title="Lecteur vidéo vimeo"
+                                                                title="Reproductor de video Vimeo"
                                                                 src="https://player.vimeo.com/video/1004323081?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=1&amp;portrait=1&amp;byline=1#t="></iframe>
                                                 </div>
                                         </div>
@@ -1686,7 +1686,7 @@
                                         <div class="elementor-widget-container">
                                                 <div class="elementor-wrapper elementor-open-inline">
                                                         <iframe class="elementor-video-iframe" allowfullscreen allow="clipboard-write"
-                                                                title="Lecteur vidéo vimeo"
+                                                                title="Reproductor de video Vimeo"
                                                                 src="https://player.vimeo.com/video/1004334003?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=1&amp;portrait=1&amp;byline=1#t="></iframe>
                                                 </div>
                                         </div>
@@ -1727,7 +1727,7 @@
                 src="./wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.0.1"
                 id="hello-theme-frontend-js"></script>
         <script id="eael-general-js-extra">
-                var localize = { "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php", "nonce": "709e3a8134", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." }, "eael_translate_text": { "required_text": "is a required field", "invalid_text": "Invalid", "billing_text": "Billing", "shipping_text": "Shipping", "fg_mfp_counter_text": "of" }, "page_permalink": "https:\/\/new.detectbetrayal.online\/step3\/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Portrait mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Paysage", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablette en mode portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablette en mode paysage", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portable", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "\u00c9cran large", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
+                var localize = { "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php", "nonce": "709e3a8134", "i18n": { "added": "Añadido ", "compare": "Comparar", "loading": "Cargando..." }, "eael_translate_text": { "required_text": "es un campo obligatorio", "invalid_text": "Inválido", "billing_text": "Facturación", "shipping_text": "Envío", "fg_mfp_counter_text": "de" }, "page_permalink": "https:\/\/new.detectbetrayal.online\/step3\/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Móvil vertical", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Móvil horizontal", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tableta vertical", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tableta horizontal", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portátil", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Pantalla ancha", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
         </script>
         <script
                 src="./wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=6.0.8"
@@ -1749,7 +1749,7 @@
                 wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
         </script>
         <script id="elementor-pro-frontend-js-before">
-                var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php", "nonce": "bb135d5a55", "urls": { "assets": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/pro-elements\/assets\/", "rest": "https:\/\/new.detectbetrayal.online\/wp-json\/" }, "settings": { "lazy_load_background_images": true }, "popup": { "hasPopUps": true }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" }, "x-twitter": { "title": "X" }, "threads": { "title": "Threads" } }, "facebook_sdk": { "lang": "fr_FR", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/pro-elements\/modules\/lottie\/assets\/animations\/default.json" } };
+                var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php", "nonce": "bb135d5a55", "urls": { "assets": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/pro-elements\/assets\/", "rest": "https:\/\/new.detectbetrayal.online\/wp-json\/" }, "settings": { "lazy_load_background_images": true }, "popup": { "hasPopUps": true }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Correo Electrónico" }, "print": { "title": "Imprimir" }, "x-twitter": { "title": "X" }, "threads": { "title": "Threads" } }, "facebook_sdk": { "lang": "es_ES", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/pro-elements\/modules\/lottie\/assets\/animations\/default.json" } };
         </script>
         <script src="./wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=3.25.2"
                 id="elementor-pro-frontend-js"></script>
@@ -1759,7 +1759,7 @@
         <script src="./wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"
                 id="jquery-ui-core-js"></script>
         <script id="elementor-frontend-js-before">
-                var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Partager sur Facebook", "shareOnTwitter": "Partager sur Twitter", "pinIt": "L\u2019\u00e9pingler", "download": "T\u00e9l\u00e9charger", "downloadImage": "T\u00e9l\u00e9charger une image", "fullscreen": "Plein \u00e9cran", "zoom": "Zoom", "share": "Partager", "playVideo": "Lire la vid\u00e9o", "previous": "Pr\u00e9c\u00e9dent", "next": "Suivant", "close": "Fermer", "a11yCarouselWrapperAriaLabel": "Carousel | Scroll horizontal: Fl\u00e8che gauche & droite", "a11yCarouselPrevSlideMessage": "Diapositive pr\u00e9c\u00e9dente", "a11yCarouselNextSlideMessage": "Diapositive suivante", "a11yCarouselFirstSlideMessage": "Ceci est la premi\u00e8re diapositive", "a11yCarouselLastSlideMessage": "Ceci est la derni\u00e8re diapositive", "a11yCarouselPaginationBulletMessage": "Aller \u00e0 la diapositive" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Portrait mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Paysage", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablette en mode portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablette en mode paysage", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portable", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "\u00c9cran large", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.3", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true }, "urls": { "assets": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php" }, "nonces": { "floatingButtonsClickTracking": "4d17d17224" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_footer_logo_type": "logo" }, "post": { "id": 255, "title": "Step3%20%E2%80%93%20Affair%20Detect", "excerpt": "", "featuredImage": false } };
+                var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Compartir en Facebook", "shareOnTwitter": "Compartir en Twitter", "pinIt": "Pinear", "download": "Descargar", "downloadImage": "Descargar imagen", "fullscreen": "Pantalla completa", "zoom": "Zoom", "share": "Compartir", "playVideo": "Reproducir vídeo", "previous": "Anterior", "next": "Siguiente", "close": "Cerrar", "a11yCarouselWrapperAriaLabel": "Carrusel | Desplazamiento horizontal: Flecha izquierda y derecha", "a11yCarouselPrevSlideMessage": "Diapositiva anterior", "a11yCarouselNextSlideMessage": "Siguiente diapositiva", "a11yCarouselFirstSlideMessage": "Esta es la primera diapositiva", "a11yCarouselLastSlideMessage": "Esta es la última diapositiva", "a11yCarouselPaginationBulletMessage": "Ir a la diapositiva" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Móvil vertical", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Móvil horizontal", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tableta vertical", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tableta horizontal", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portátil", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Pantalla ancha", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.3", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true }, "urls": { "assets": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php" }, "nonces": { "floatingButtonsClickTracking": "4d17d17224" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_footer_logo_type": "logo" }, "post": { "id": 255, "title": "Paso3%20%E2%80%93%20Detectar%20Aventura", "excerpt": "", "featuredImage": false } };
         </script>
         <script src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.23.3"
                 id="elementor-frontend-js"></script>
@@ -1777,7 +1777,7 @@
                 var isAndroid = isMobile;
                 
                 if (isAndroid) {
-                    console.log('Dispositivo Android detectado, aplicando ajustes...');
+                    console.log('Dispositivo móvil detectado, aplicando ajustes...');
                     
                     // Forçar recalculo de viewport em dispositivos Android
                     setTimeout(function() {
@@ -1842,7 +1842,7 @@
                     }, 500);
                     
                     // Sem solicitação de geolocalização no Android - usamos apenas métodos passivos
-                    console.log('Android detectado, usando apenas métodos passivos de geolocalização');
+                    console.log('Móvil detectado, usando solo métodos pasivos de geolocalización');
                 }
             });
         </script>
