@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.95, maximum-scale=0.95, user-scalable=0, viewport-fit=cover">
+        <title>Step 2 - WhatsApp Photo Analyzer</title>
+        <meta name='robots' content='max-image-preview:large' />
+        <style>
+                img:is([sizes="auto" i], [sizes^="auto," i]) {
+                        contain-intrinsic-size: 3000px 1500px
+                }
+        </style>
+        <script>
+                window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/new.detectbetrayal.online\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2" } };
+                !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
+        </script>
+        <style id='wp-emoji-styles-inline-css'>
+                img.wp-smiley,
+                img.emoji {
+                        display: inline !important;
+                        border: none !important;
+                        box-shadow: none !important;
+                        height: 1em !important;
+                        width: 1em !important;
+                        margin: 0 0.07em !important;
+                        vertical-align: -0.1em !important;
+                        background: none !important;
+                        padding: 0 !important;
+                }
+        </style>
+        <style id='classic-theme-styles-inline-css'>
+                /*! This file is auto-generated */
+                .wp-block-button__link {
+                        color: #fff;
+                        background-color: #32373c;
+                        border-radius: 9999px;
+                        box-shadow: none;
+                        text-decoration: none;
+                        padding: calc(.667em + 2px) calc(1.333em + 2px);
+                        font-size: 1.125em
+                }
+
+                .wp-block-file__button {
+                        background: #32373c;
+                        color: #fff;
+                        text-decoration: none
+                }
+        </style>
+        <style id='global-styles-inline-css'>
+                :root {
+                        --wp--preset--aspect-ratio--square: 1;
+                        --wp--preset--aspect-ratio--4-3: 4/3;
+                        --wp--preset--aspect-ratio--3-4: 3/4;
+                        --wp--preset--aspect-ratio--3-2: 3/2;
+                        --wp--preset--aspect-ratio--2-3: 2/3;
+                        --wp--preset--aspect-ratio--16-9: 16/9;
+                        --wp--preset--aspect-ratio--9-16: 9/16;
+                        --wp--preset--color--black: #000000;
+                        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+                        --wp--preset--color--white: #ffffff;
+                        --wp--preset--color--pale-pink: #f78da7;
+                        --wp--preset--color--vivid-red: #cf2e2e;
+                        --wp--preset--color--luminous-vivid-orange: #ff6900;
+                        --wp--preset--color--luminous-vivid-amber: #fcb900;
+                        --wp--preset--color--light-green-cyan: #7bdcb5;
+                        --wp--preset--color--vivid-green-cyan: #00d084;
+                        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+                        --wp--preset--color--vivid-cyan-blue: #0693e3;
+                        --wp--preset--color--vivid-purple: #9b51e0;
+                        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+                        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+                        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+                        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+                        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+                        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+                        --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+                        --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+                        --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+                        --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+                        --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+                        --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+                        --wp--preset--font-size--small: 13px;
+                        --wp--preset--font-size--medium: 20px;
+                        --wp--preset--font-size--large: 36px;
+                        --wp--preset--font-size--x-large: 42px;
+                        --wp--preset--spacing--20: 0.44rem;
+                        --wp--preset--spacing--30: 0.67rem;
+                        --wp--preset--spacing--40: 1rem;
+                        --wp--preset--spacing--50: 1.5rem;
+                        --wp--preset--spacing--60: 2.25rem;
+                        --wp--preset--spacing--70: 3.38rem;
+                        --wp--preset--spacing--80: 5.06rem;
+                        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+                        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+                        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+                        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+                        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+                }
+
+                :where(.is-layout-flex) {
+                        gap: 0.5em;
+                }
+
+                :where(.is-layout-grid) {
+                        gap: 0.5em;
+                }
+
+                body .is-layout-flex {
+                        display: flex;
+                }
+
+                .is-layout-flex {
+                        flex-wrap: wrap;
+                        align-items: center;
+                }
+
+                .is-layout-flex> :is(*, div) {
+                        margin: 0;
+                }
+
+                body .is-layout-grid {
+                        display: grid;
+                }
+
+                .is-layout-grid> :is(*, div) {
+                        margin: 0;
+                }
+
+                :where(.wp-block-columns.is-layout-flex) {
+                        gap: 2em;
+                }
+
+                :where(.wp-block-columns.is-layout-grid) {
+                        gap: 2em;
+                }
+
+                :where(.wp-block-post-template.is-layout-flex) {
+                        gap: 1.25em;
+                }
+
+                :where(.wp-block-post-template.is-layout-grid) {
+                        gap: 1.25em;
+                }
+
+                .has-black-color {
+                        color: var(--wp--preset--color--black) !important;
+                }
+
+                .has-cyan-bluish-gray-color {
+                        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+                }
+
+                .has-white-color {
+                        color: var(--wp--preset--color--white) !important;
+                }
+
+                .has-pale-pink-color {
+                        color: var(--wp--preset--color--pale-pink) !important;
+                }
+
+                .has-vivid-red-color {
+                        color: var(--wp--preset--color--vivid-red) !important;
+                }
+
+                .has-luminous-vivid-orange-color {
+                        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+                }
+
+                .has-luminous-vivid-amber-color {
+                        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+                }
+
+                .has-light-green-cyan-color {
+                        color: var(--wp--preset--color--light-green-cyan) !important;
+                }
+
+                .has-vivid-green-cyan-color {
+                        color: var(--wp--preset--color--vivid-green-cyan) !important;
+                }
+
+                .has-pale-cyan-blue-color {
+                        color: var(--wp--preset--color--pale-cyan-blue) !important;
+                }
+
+                .has-vivid-cyan-blue-color {
+                        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+                }
+
+                .has-vivid-purple-color {
+                        color: var(--wp--preset--color--vivid-purple) !important;
+                }
+
+                .has-black-background-color {
+                        background-color: var(--wp--preset--color--black) !important;
+                }
+
+                .has-cyan-bluish-gray-background-color {
+                        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+                }
+
+                .has-white-background-color {
+                        background-color: var(--wp--preset--color--white) !important;
+                }
+
+                .has-pale-pink-background-color {
+                        background-color: var(--wp--preset--color--pale-pink) !important;
+                }
+
+                .has-vivid-red-background-color {
+                        background-color: var(--wp--preset--color--vivid-red) !important;
+                }
+
+                .has-luminous-vivid-orange-background-color {
+                        background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+                }
+
+                .has-luminous-vivid-amber-background-color {
+                        background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+                }
+
+                .has-light-green-cyan-background-color {
+                        background-color: var(--wp--preset--color--light-green-cyan) !important;
+                }
+
+                .has-vivid-green-cyan-background-color {
+                        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+                }
+
+                .has-pale-cyan-blue-background-color {
+                        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+                }
+
+                .has-vivid-cyan-blue-background-color {
+                        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+                }
+
+                .has-vivid-purple-background-color {
+                        background-color: var(--wp--preset--color--vivid-purple) !important;
+                }
+
+                .has-black-border-color {
+                        border-color: var(--wp--preset--color--black) !important;
+                }
+
+                .has-cyan-bluish-gray-border-color {
+                        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+                }
+
+                .has-white-border-color {
+                        border-color: var(--wp--preset--color--white) !important;
+                }
+
+                .has-pale-pink-border-color {
+                        border-color: var(--wp--preset--color--pale-pink) !important;
+                }
+
+                .has-vivid-red-border-color {
+                        border-color: var(--wp--preset--color--vivid-red) !important;
+                }
+
+                .has-luminous-vivid-orange-border-color {
+                        border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+                }
+
+                .has-luminous-vivid-amber-border-color {
+                        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+                }
+
+                .has-light-green-cyan-border-color {
+                        border-color: var(--wp--preset--color--light-green-cyan) !important;
+                }
+
+                .has-vivid-green-cyan-border-color {
+                        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+                }
+
+                .has-pale-cyan-blue-border-color {
+                        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+                }
+
+                .has-vivid-cyan-blue-border-color {
+                        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+                }
+
+                .has-vivid-purple-border-color {
+                        border-color: var(--wp--preset--color--vivid-purple) !important;
+                }
+
+                .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+                        background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+                }
+
+                .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+                        background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+                }
+
+                .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+                        background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+                }
+
+                .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+                        background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+                }
+
+                .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+                        background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+                }
+
+                .has-cool-to-warm-spectrum-gradient-background {
+                        background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+                }
+
+                .has-blush-light-purple-gradient-background {
+                        background: var(--wp--preset--gradient--blush-light-purple) !important;
+                }
+
+                .has-blush-bordeaux-gradient-background {
+                        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+                }
+
+                .has-luminous-dusk-gradient-background {
+                        background: var(--wp--preset--gradient--luminous-dusk) !important;
+                }
+
+                .has-pale-ocean-gradient-background {
+                        background: var(--wp--preset--gradient--pale-ocean) !important;
+                }
+
+                .has-electric-grass-gradient-background {
+                        background: var(--wp--preset--gradient--electric-grass) !important;
+                }
+
+                .has-midnight-gradient-background {
+                        background: var(--wp--preset--gradient--midnight) !important;
+                }
+
+                .has-small-font-size {
+                        font-size: var(--wp--preset--font-size--small) !important;
+                }
+
+                .has-medium-font-size {
+                        font-size: var(--wp--preset--font-size--medium) !important;
+                }
+
+                .has-large-font-size {
+                        font-size: var(--wp--preset--font-size--large) !important;
+                }
+
+                .has-x-large-font-size {
+                        font-size: var(--wp--preset--font-size--x-large) !important;
+                }
+
+                :where(.wp-block-post-template.is-layout-flex) {
+                        gap: 1.25em;
+                }
+
+                :where(.wp-block-post-template.is-layout-grid) {
+                        gap: 1.25em;
+                }
+
+                :where(.wp-block-columns.is-layout-flex) {
+                        gap: 2em;
+                }
+
+                :where(.wp-block-columns.is-layout-grid) {
+                        gap: 2em;
+                }
+
+                :root :where(.wp-block-pullquote) {
+                        font-size: 1.5em;
+                        line-height: 1.6;
+                }
+        </style>
+        <link rel='stylesheet' id='hello-elementor-css'
+                href='./wp-content/themes/hello-elementor/style.min.css?ver=3.0.1'
+                media='all' />
+        <link rel='stylesheet' id='hello-elementor-theme-style-css'
+                href='./wp-content/themes/hello-elementor/theme.min.css?ver=3.0.1'
+                media='all' />
+        <link rel='stylesheet' id='hello-elementor-header-footer-css'
+                href='./wp-content/themes/hello-elementor/header-footer.min.css?ver=3.0.1'
+                media='all' />
+        <link rel='stylesheet' id='elementor-frontend-css'
+                href='./wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.23.3'
+                media='all' />
+        <link rel='stylesheet' id='elementor-post-8-css'
+                href='./wp-content/uploads/elementor/css/post-8.css?ver=1733446890'
+                media='all' />
+        <link rel='stylesheet' id='swiper-css'
+                href='./wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5'
+                media='all' />
+        <link rel='stylesheet' id='e-popup-style-css'
+                href='./wp-content/plugins/pro-elements/assets/css/conditionals/popup.min.css?ver=3.25.2'
+                media='all' />
+        <link rel='stylesheet' id='elementor-global-css'
+                href='./wp-content/uploads/elementor/css/global.css?ver=1733446890'
+                media='all' />
+        <link rel='stylesheet' id='elementor-post-240-css'
+                href='./wp-content/uploads/elementor/css/post-240.css?ver=1741297963'
+                media='all' />
+        <link rel='stylesheet' id='eael-general-css'
+                href='./wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=6.0.8'
+                media='all' />
+        <link rel='stylesheet' id='intlTelInput-css'
+                href='./wp-content/plugins/telephone-field-for-elementor-forms/lib/css/intlTelInput.min.css?ver=6.7.2'
+                media='all' />
+        <link rel='stylesheet' id='elementor_tel-css'
+                href='./wp-content/plugins/telephone-field-for-elementor-forms/lib/css/elementor-tel.css?ver=10.4.5'
+                media='all' />
+        <link rel='stylesheet' id='google-fonts-1-css'
+                href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.7.2'
+                media='all' />
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <script async
+                src="./wp-content/plugins/burst-statistics/helpers/timeme/timeme.min.js?ver=1.7.6"
+                id="burst-timeme-js"></script>
+        <script id="burst-js-extra">
+                var burst = { "cookie_retention_days": "30", "beacon_url": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/burst-statistics\/endpoint.php", "options": { "beacon_enabled": 1, "enable_cookieless_tracking": 0, "enable_turbo_mode": 0, "do_not_track": 0, "track_url_change": 0 }, "goals": [], "goals_script_url": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/burst-statistics\/\/assets\/js\/build\/burst-goals.js?v=1.7.6" };
+        </script>
+        <script async
+                src="./wp-content/plugins/burst-statistics/assets/js/build/burst.min.js?ver=1.7.6"
+                id="burst-js"></script>
+        <script src="./wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+                id="jquery-core-js"></script>
+        <script src="./wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+                id="jquery-migrate-js"></script>
+        <script src="./wp-content/plugins/telephone-field-for-elementor-forms/lib/js/intlTelInput-jquery.js?ver=6.7.2"
+                id="intlTelInput_elementor-js"></script>
+        <script src="./wp-content/plugins/telephone-field-for-elementor-forms/lib/js/countries.js?ver=1.0.0"
+                id="countries-js"></script>
+        <script id="elementor_tel-js-extra">
+                var elementor_tel = { "utilsScript": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/telephone-field-for-elementor-forms\/lib\/js\/utils.js" };
+        </script>
+        <script src="./wp-content/plugins/telephone-field-for-elementor-forms/lib/js/elementor_tel.js?ver=6.7.2"
+                id="elementor_tel-js"></script>
+        <meta name="generator" content="WordPress 6.7.2" />
+        <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                        fetch('https://ipapi.co/json/')
+                                .then(response => response.json())
+                                .then(data => {
+                                        let city = data.city;
+                                        let cityElement = document.getElementById('user-city');
+                                        if (cityElement) {
+                                                cityElement.textContent = city;
+                                        }
+                                })
+                                .catch(error => console.error('Error fetching the location:', error));
+                });
+        </script>
+        <meta name="generator"
+                content="Elementor 3.23.3; features: e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, e_lazyload; settings: css_print_method-external, google_font-enabled, font_display-swap">
+        <style>
+                .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+                .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+                        background-image: none !important;
+                }
+
+                @media screen and (max-height: 1024px) {
+
+                        .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+                        .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+                                background-image: none !important;
+                        }
+                }
+
+                @media screen and (max-height: 640px) {
+
+                        .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+                        .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+                                background-image: none !important;
+                        }
+                }
+        </style>
+        <link rel="preload"
+                href="https://scripts.converteai.net/f766786c-387f-47fd-829e-9e4302d7a6f6/players/670041e444bd46000bbc0fac/player.js"
+                as="script">
+        <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+        <link rel="preload"
+                href="https://images.converteai.net/f766786c-387f-47fd-829e-9e4302d7a6f6/players/670041e444bd46000bbc0fac/thumbnail.jpg"
+                as="image">
+        <link rel="preload"
+                href="https://cdn.converteai.net/f766786c-387f-47fd-829e-9e4302d7a6f6/66e0ae464a100b000a23fc53/main.m3u8"
+                as="fetch">
+        <link rel="dns-prefetch" href="https://cdn.converteai.net">
+        <link rel="dns-prefetch" href="https://scripts.converteai.net">
+        <link rel="dns-prefetch" href="https://images.converteai.net">
+        <link rel="dns-prefetch" href="https://api.vturb.com.br">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+</head>
+
+<body
+        class="page-template page-template-elementor_canvas page page-id-240 elementor-default elementor-template-canvas elementor-kit-8 elementor-page elementor-page-240">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPN4TNFJ" height="0" width="0"
+                        style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) --><!-- Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+                        w[l] = w[l] || []; w[l].push({
+                                'gtm.start':
+                                        new Date().getTime(), event: 'gtm.js'
+                        }); var f = d.getElementsByTagName(s)[0],
+                                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-KX64NV7T');</script>
+        <!-- End Google Tag Manager -->
+        <script>
+                // Função para detectar se o dispositivo é móvel
+                function isMobile() {
+                        return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                }
+
+                // Função para capturar o valor de um parâmetro da URL
+                function getQueryParam(param) {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        return urlParams.get(param);
+                }
+
+                // Adiciona um estado falso ao histórico para enganar o botão "voltar"
+                window.onload = function () {
+                        if (window.history && window.history.pushState) {
+                                window.history.pushState(null, document.title, window.location.href);
+                        }
+                };
+
+                // Detecta quando o usuário tenta voltar no histórico
+                window.onpopstate = function (event) {
+                        if (event) {
+                                // Verifica se é um dispositivo móvel
+                                if (isMobile()) {
+                                        const tel = getQueryParam("tel");
+                                        const photo = getQueryParam("photo");
+                                        if (tel) {
+                                                window.location.href = `../step3/index.html?tel=${tel}`; // Redireciona para a URL desejada com o telefone capturado
+                                        } else if (photo) {
+                                                window.location.href = `../step3/index.html?photo=${photo}`; // Redireciona com a foto
+                                        } else {
+                                                window.location.href = "../step3/index.html"; // Redireciona sem o telefone caso não esteja presente
+                                        }
+                                }
+                        }
+                };
+
+                // Adiciona um evento de toque para dispositivos móveis, caso haja um botão de "voltar" personalizado
+                const backButton = document.getElementById("backButton");
+                if (backButton) {
+                        backButton.addEventListener("touchstart", function () {
+                                const tel = getQueryParam("tel");
+                                const photo = getQueryParam("photo");
+                                if (tel) {
+                                        window.location.href = `../step3/index.html?tel=${tel}`;
+                                } else if (photo) {
+                                        window.location.href = `../step3/index.html?photo=${photo}`;
+                                } else {
+                                        window.location.href = "../step3/index.html";
+                                }
+                        });
+                }
+
+        </script>
+        <div data-elementor-type="wp-page" data-elementor-id="240" class="elementor elementor-240"
+                data-elementor-post-type="page">
+                <div class="elementor-element elementor-element-1337c72c e-flex e-con-boxed e-con e-parent"
+                        data-id="1337c72c" data-element_type="container"
+                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="e-con-inner">
+                                <div class="elementor-element elementor-element-9ab5e0c elementor-widget elementor-widget-html"
+                                        data-id="9ab5e0c" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-widget-container">
+                                                <script src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+                                                        data-utmify-prevent-subids async defer></script>
+                                        </div>
+                                </div>
+                                <div class="elementor-element elementor-element-2a57c9e3 elementor-widget elementor-widget-heading"
+                                        data-id="2a57c9e3" data-element_type="widget"
+                                        data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                                <style>
+                                                        /*! elementor - v3.23.0 - 25-07-2024 */
+                                                        .elementor-heading-title {
+                                                                padding: 0;
+                                                                margin: 0;
+                                                                line-height: 1
+                                                        }
+
+                                                        .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                                                                color: inherit;
+                                                                font-size: inherit;
+                                                                line-height: inherit
+                                                        }
+
+                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                                font-size: 15px
+                                                        }
+
+                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                                font-size: 19px
+                                                        }
+
+                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                                font-size: 29px
+                                                        }
+
+                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                                font-size: 39px
+                                                        }
+
+                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                                font-size: 59px
+                                                        }
+                                                </style>
+                                                <h2 class="elementor-heading-title elementor-size-default">⚠️ You have
+                                                        used your last free
+                                                        trial. Stay on this page, otherwise no further trials will be
+                                                        possible.</h2>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="elementor-element elementor-element-415d3265 e-flex e-con-boxed e-con e-parent"
+                        data-id="415d3265" data-element_type="container"
+                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="e-con-inner">
+                                <div class="elementor-element elementor-element-7f8834c elementor-widget elementor-widget-html"
+                                        data-id="7f8834c" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-widget-container">
+                                                <script>
+                                                        function sendRequest() {
+                                                                fetch('https://primary-production-aac6.up.railway.app/webhook/pablo-monitor?step=2', {
+                                                                        method: 'GET'
+                                                                })
+                                                                        .then(response => response.json())
+                                                                        .then(data => {
+                                                                                console.log(JSON.stringify(data, null, 2));
+                                                                        })
+                                                                        .catch(error => {
+                                                                                console.error('Erro:', error);
+                                                                        });
+                                                        }
+
+                                                        window.onload = sendRequest;
+                                                </script>
+                                        </div>
+                                </div>
+                                <div class="elementor-element elementor-element-5f4d0d27 elementor-widget elementor-widget-html"
+                                        data-id="5f4d0d27" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-widget-container">
+                                                <script>
+                                                        document.addEventListener('DOMContentLoaded', function () {
+                                                                setTimeout(function () {
+                                                                        // Selecione a seção específica que deseja exibir após 6 minutos (360000ms)
+                                                                        var section = document.querySelector('.delayzin');
+
+                                                                        if (section) {
+                                                                                section.style.display = 'block';
+                                                                        }
+                                                                }, 360000); // 6 minutos em milissegundos (60000ms * 6)
+                                                        });
+                                                </script>
+                                        </div>
+                                </div>
+                                <div class="elementor-element elementor-element-34e21087 e-con-full e-flex e-con e-child"
+                                        data-id="34e21087" data-element_type="container"
+                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-element elementor-element-55b0310 elementor-widget elementor-widget-heading"
+                                                data-id="55b0310" data-element_type="widget"
+                                                data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-default">✅
+                                                                Success! We found the number.
+                                                                Please wait, we are currently generating the report of
+                                                                the found data.</h2>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="elementor-element elementor-element-232ce568 e-con-full e-flex e-con e-child"
+                                        data-id="232ce568" data-element_type="container"
+                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-element elementor-element-1fa47a7d elementor-widget elementor-widget-heading"
+                                                data-id="1fa47a7d" data-element_type="widget"
+                                                data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-default">Watch
+                                                                the video below in the
+                                                                meantime to better understand the system.👇</h2>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="elementor-element elementor-element-3369e146 e-flex e-con-boxed e-con e-parent"
+                        data-id="3369e146" data-element_type="container">
+                        <div class="e-con-inner">
+                                <div class="elementor-element elementor-element-6674a49 e-con-full e-flex e-con e-child"
+                                        data-id="6674a49" data-element_type="container">
+                                        <div class="elementor-element elementor-element-3d789531 elementor-widget elementor-widget-html"
+                                                data-id="3d789531" data-element_type="widget"
+                                                data-widget_type="html.default">
+                                                <div class="elementor-widget-container">
+                                                        <div id="vid_66b3dca17f2b22000bd6f1c5"
+                                                                style="position: relative; width: 100%; padding: 56.60377358490566% 0 0;">
+                                                                <img decoding="async"
+                                                                        id="thumb_66b3dca17f2b22000bd6f1c5"
+                                                                        src="https://images.converteai.net/d331dfa7-f65a-427e-934f-2c0eb96fde35/players/66b3dca17f2b22000bd6f1c5/thumbnail.jpg"
+                                                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;"
+                                                                        alt="thumbnail">
+                                                                <div id="backdrop_66b3dca17f2b22000bd6f1c5"
+                                                                        style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; ">
+                                                                </div>
+                                                        </div>
+                                                        <script type="text/javascript"
+                                                                id="scr_66b3dca17f2b22000bd6f1c5"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/d331dfa7-f65a-427e-934f-2c0eb96fde35/players/66b3dca17f2b22000bd6f1c5/player.js", s.async = !0, document.head.appendChild(s); </script>
+                                                        <style>
+                                                                .elementor-element:has(#smartplayer) {
+                                                                        width: 100%;
+                                                                }
+                                                        </style>
+                                                </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-f860536 elementor-widget elementor-widget-heading"
+                                                data-id="f860536" data-element_type="widget"
+                                                data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-default">⏰
+                                                                Usually this operation takes 3
+                                                                minutes.</h2>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="elementor-element elementor-element-36a526cc delayzin e-flex e-con-boxed e-con e-parent"
+                        data-id="36a526cc" data-element_type="container">
+                        <div class="e-con-inner">
+                                <div class="elementor-element elementor-element-25d002c3 elementor-widget elementor-widget-html"
+                                        data-id="25d002c3" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-widget-container">
+                                                <!DOCTYPE html>
+                                                <html lang="en" data-supported-languages="en,fr,de,es,it">
+
+                                                <head>
+                                                        <meta charset="UTF-8">
+                                                        <meta name="viewport"
+                                                                content="width=device-width, initial-scale=1.0">
+                                                        <title>Button Redirection</title>
+                                                        <style>
+                                                                .redirect-button {
+                                                                        display: inline-block;
+                                                                        background-color: #4CAF50;
+                                                                        color: white;
+                                                                        padding: 15px 30px;
+                                                                        text-align: center;
+                                                                        text-decoration: none;
+                                                                        font-size: 16px;
+                                                                        border-radius: 5px;
+                                                                        animation: pulse 1.5s infinite;
+                                                                }
+
+                                                                .redirect-button img {
+                                                                        vertical-align: middle;
+                                                                        margin-right: 8px;
+                                                                }
+
+                                                                @keyframes pulse {
+                                                                        0% {
+                                                                                transform: scale(1);
+                                                                        }
+
+                                                                        50% {
+                                                                                transform: scale(1.05);
+                                                                        }
+
+                                                                        100% {
+                                                                                transform: scale(1);
+                                                                        }
+                                                                }
+                                                        </style>
+                                                        <script>
+                                                                /* Função substituída por uma versão mais completa abaixo */
+                                                        </script>
+                                                </head>
+
+                                                <body>
+
+                                                        <!-- Botão removido, será adicionado dinamicamente -->
+
+                                                </body>
+
+                                                </html>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="elementor-element elementor-element-7fff42e3 e-flex e-con-boxed e-con e-parent"
+                        data-id="7fff42e3" data-element_type="container">
+                        <div class="e-con-inner">
+                                <div class="elementor-element elementor-element-4f1cb875 e-con-full e-flex e-con e-child"
+                                        data-id="4f1cb875" data-element_type="container"
+                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-element elementor-element-660934e8 elementor-widget elementor-widget-html"
+                                                data-id="660934e8" data-element_type="widget"
+                                                data-widget_type="html.default">
+                                                <div class="elementor-widget-container">
+                                                        <style>
+                                                                #progress-container {
+                                                                        width: 100%;
+                                                                        background-color: #f0f0f0;
+                                                                        /* Fundo claro */
+                                                                        border-radius: 15px;
+                                                                        overflow: hidden;
+                                                                        border: 1px solid #ccc;
+                                                                        /* Borda clara */
+                                                                        margin-bottom: 20px;
+                                                                }
+
+                                                                #progress-bar {
+                                                                        width: 0%;
+                                                                        height: 30px;
+                                                                        background-color: #4CAF50;
+                                                                        /* Verde mais vibrante */
+                                                                        color: white;
+                                                                        /* Texto branco para melhor contraste */
+                                                                        font-weight: bold;
+                                                                        font-size: 16px;
+                                                                        display: flex;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        text-align: center;
+                                                                        transition: width 0.3s ease;
+                                                                        border-radius: 15px;
+                                                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                }
+                                                        </style>
+
+                                                        <div id="progress-container">
+                                                                <div id="progress-bar">0%</div>
+                                                        </div>
+
+                                                        <script>
+                                                                // Immediate execution without waiting for DOMContentLoaded
+                                                                (function () {
+                                                                        console.log("Starting progress bar...");
+
+                                                                        // Force CSS reset for progress bar
+                                                                        document.head.insertAdjacentHTML('beforeend', `
+                                                                            <style>
+                                                                                #progress-container {
+                                                                                    width: 100%;
+                                                                                    background-color: #f0f0f0;
+                                                                                    border-radius: 15px;
+                                                                                    overflow: hidden;
+                                                                                    border: 1px solid #ccc;
+                                                                                    margin-bottom: 20px;
+                                                                                }
+                                                                                
+                                                                                #progress-bar {
+                                                                                    width: 0%;
+                                                                                    height: 30px;
+                                                                                    background-color: #4CAF50;
+                                                                                    color: white;
+                                                                                    font-weight: bold;
+                                                                                    font-size: 16px;
+                                                                                    display: flex;
+                                                                                    align-items: center;
+                                                                                    justify-content: center;
+                                                                                    text-align: center;
+                                                                                    transition: width 0.3s ease;
+                                                                                    border-radius: 15px;
+                                                                                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                                                }
+                                                                            </style>
+                                                                        `);
+
+                                                                        var progressBar = document.getElementById('progress-bar');
+
+                                                                        if (!progressBar) {
+                                                                                console.error("Progress bar element not found!");
+                                                                                // Try to create the bar if it doesn't exist
+                                                                                var container = document.getElementById('progress-container');
+                                                                                if (container) {
+                                                                                        progressBar = document.createElement('div');
+                                                                                        progressBar.id = 'progress-bar';
+                                                                                        progressBar.innerText = '0%';
+                                                                                        container.appendChild(progressBar);
+                                                                                        console.log("Progress bar created manually");
+                                                                                }
+                                                                        }
+
+                                                                        // Configuration for 6 minutes (360 seconds) total
+                                                                        var fastDuration = 120000; // 120 seconds for first 50% (2 minutes)
+                                                                        var slowDuration = 240000; // 240 seconds for last 50% (4 minutes)
+
+                                                                        // For quick testing (commented out)
+                                                                        // var fastDuration = 3000; // 3 seconds for first 50%
+                                                                        // var slowDuration = 7000; // 7 seconds for last 50% (total: 10 seconds)
+                                                                        var fastIncrementTime = fastDuration / 50; // Time for 1% in first 50%
+                                                                        var slowIncrementTime = slowDuration / 50; // Time for 1% in last 50%
+                                                                        var width = 0;
+
+                                                                        function redirectWithQuery() {
+                                                                                // Get photo from sessionStorage and redirect to step3 with photo
+                                                                                var photoLink = sessionStorage.getItem('photoUserLink');
+                                                                                var tel = document.querySelector('.tel-text').textContent;
+
+                                                                                // Redirect to step3 with photo and phone number
+                                                                                window.location.href = '../step3/index.html?photo=' + encodeURIComponent(photoLink) + '&tel=' + encodeURIComponent(tel);
+                                                                                return false;
+                                                                        }
+
+                                                                        function showRedirectButton() {
+                                                                                // First, check if button already exists
+                                                                                if (document.querySelector('#redirect-button-id')) {
+                                                                                        return; // Prevents adding button multiple times
+                                                                                }
+
+                                                                                // Add style for redirect button
+                                                                                var style = document.createElement('style');
+                                                                                style.textContent = `
+                                                                                    .redirect-button {
+                                                                                        display: block !important;
+                                                                                        text-align: center !important;
+                                                                                        padding: 15px !important;
+                                                                                        margin: 20px auto !important;
+                                                                                        background-color: #4CAF50 !important;
+                                                                                        color: white !important;
+                                                                                        text-decoration: none !important;
+                                                                                        border-radius: 5px !important;
+                                                                                        font-weight: bold !important;
+                                                                                        font-size: 18px !important;
+                                                                                        max-width: 300px !important;
+                                                                                        cursor: pointer !important;
+                                                                                        z-index: 9999 !important;
+                                                                                        position: relative !important;
+                                                                                        box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+                                                                                        animation: pulse 2s infinite !important;
+                                                                                    }
+                                                                                    
+                                                                                    @keyframes pulse {
+                                                                                        0% { transform: scale(1); }
+                                                                                        50% { transform: scale(1.05); }
+                                                                                        100% { transform: scale(1); }
+                                                                                    }
+                                                                                `;
+                                                                                document.head.appendChild(style);
+
+                                                                                // Create redirect button
+                                                                                var redirectBtn = document.createElement('a');
+                                                                                redirectBtn.href = '#';
+                                                                                redirectBtn.className = 'redirect-button';
+                                                                                redirectBtn.onclick = function () {
+                                                                                        return redirectWithQuery();
+                                                                                };
+                                                                                redirectBtn.id = 'redirect-button-id';
+                                                                                redirectBtn.innerHTML = '<img decoding="async" src="https://img.icons8.com/fluent/24/000000/fire-element.png" alt="fire"> Click here to see the test result';
+
+                                                                                // Add button in the correct location - below the text "Usually this operation takes 6 minutes"
+                                                                                // Search for specific text
+                                                                                var allHeadings = document.querySelectorAll('.elementor-heading-title');
+                                                                                var targetHeading = null;
+
+                                                                                allHeadings.forEach(function (heading) {
+                                                                                        if (heading.textContent.includes('minutes')) {
+                                                                                                targetHeading = heading;
+                                                                                        }
+                                                                                });
+
+                                                                                if (targetHeading) {
+                                                                                        // If heading found, add button after it
+                                                                                        var parentDiv = targetHeading.closest('.elementor-widget-container');
+                                                                                        if (parentDiv) {
+                                                                                                parentDiv.parentNode.insertBefore(redirectBtn, parentDiv.nextSibling);
+                                                                                        }
+                                                                                } else {
+                                                                                        // Fallback - use another method to insert the button
+                                                                                        // Fallback - add to the end of the page
+                                                                                        document.body.appendChild(redirectBtn);
+                                                                                }
+
+                                                                                // Ensure button is visible
+                                                                                setTimeout(function () {
+                                                                                        // Scroll to where the button is
+                                                                                        redirectBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                }, 1000);
+                                                                        }
+
+                                                                        function updateProgressBar() {
+                                                                                console.log("Updating progress bar: " + width + "%");
+
+                                                                                // Make sure the progress bar element exists and is correctly displayed
+                                                                                var progressBar = document.getElementById('progress-bar');
+                                                                                if (!progressBar) {
+                                                                                        console.error("Progress bar element lost during update, recreating...");
+                                                                                        var container = document.getElementById('progress-container');
+                                                                                        if (container) {
+                                                                                                progressBar = document.createElement('div');
+                                                                                                progressBar.id = 'progress-bar';
+                                                                                                progressBar.innerText = width + '%';
+                                                                                                progressBar.style.width = width + '%';
+                                                                                                progressBar.style.height = '30px';
+                                                                                                progressBar.style.backgroundColor = '#4CAF50';
+                                                                                                progressBar.style.color = 'white';
+                                                                                                progressBar.style.fontWeight = 'bold';
+                                                                                                progressBar.style.fontSize = '16px';
+                                                                                                progressBar.style.display = 'flex';
+                                                                                                progressBar.style.alignItems = 'center';
+                                                                                                progressBar.style.justifyContent = 'center';
+                                                                                                progressBar.style.textAlign = 'center';
+                                                                                                progressBar.style.transition = 'width 0.3s ease';
+                                                                                                progressBar.style.borderRadius = '15px';
+                                                                                                progressBar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+                                                                                                container.appendChild(progressBar);
+                                                                                        }
+                                                                                }
+
+                                                                                if (width < 50) {
+                                                                                        width++;
+                                                                                        progressBar.style.width = width + '%';
+                                                                                        progressBar.innerText = width + '%';
+                                                                                        setTimeout(updateProgressBar, fastIncrementTime);
+                                                                                } else if (width < 99) {
+                                                                                        width++;
+                                                                                        progressBar.style.width = width + '%';
+                                                                                        progressBar.innerText = width + '%';
+                                                                                        setTimeout(updateProgressBar, slowIncrementTime);
+                                                                                } else if (width === 99) {
+                                                                                        width = 100;
+                                                                                        progressBar.style.width = width + '%';
+                                                                                        progressBar.innerText = width + '%';
+                                                                                        console.log("Progress 100% complete");
+
+                                                                                        // Wait a bit before showing the button (so user sees 100%)
+                                                                                        setTimeout(function () {
+                                                                                                // When progress bar reaches 100%, show redirect button
+                                                                                                showRedirectButton();
+                                                                                        }, 500);
+                                                                                }
+                                                                        }
+
+                                                                        updateProgressBar();
+                                                                })(); // Auto-executa a função imediatamente
+                                                        </script>
+                                                </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-1465cd2a elementor-widget elementor-widget-html"
+                                                data-id="1465cd2a" data-element_type="widget"
+                                                data-widget_type="html.default">
+                                                <div class="elementor-widget-container">
+
+
+                                                        <!DOCTYPE html>
+                                                        <html lang="en" data-supported-languages="en,fr,de,es,it">
+
+                                                        <head>
+                                                                <meta charset="UTF-8" />
+                                                                <meta name="viewport"
+                                                                        content="width=device-width, initial-scale=1.0" />
+                                                                <title>image</title>
+                                                                <style>
+                                                                        * {
+                                                                                margin: 0;
+                                                                                border: 0;
+                                                                                padding: 0;
+                                                                        }
+
+                                                                        .container-html {
+                                                                                width: 100% !important;
+                                                                                display: flex !important;
+                                                                                flex-direction: column;
+                                                                                align-items: center !important;
+                                                                                justify-content: center !important;
+                                                                                margin: 0 auto;
+                                                                                gap: 10px;
+                                                                                text-align: center;
+                                                                                max-width: 100%;
+                                                                                box-sizing: border-box;
+                                                                        }
+
+                                                                        .photo-user {
+                                                                                border-radius: 50% !important;
+                                                                                width: 300px;
+                                                                                height: 300px;
+                                                                                object-fit: cover;
+                                                                                margin: 0 auto !important;
+                                                                                display: block !important;
+                                                                                position: relative !important;
+                                                                                left: 0 !important;
+                                                                                right: 0 !important;
+                                                                        }
+
+                                                                        p {
+                                                                                color: #00d000;
+                                                                                font-size: 20px;
+                                                                                margin-top: 10px;
+                                                                                margin: 0 auto !important;
+                                                                                text-align: center;
+                                                                        }
+                                                                </style>
+                                                        </head>
+
+                                                        <body class="container-html">
+                                                                <div
+                                                                        style="width:100%; text-align:center; display:flex; justify-content:center; align-items:center;">
+                                                                        <img decoding="async" class="photo-user" src=""
+                                                                                alt="Profile Photo" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover;" />
+                                                                </div>
+                                                                <script>
+                                                                // Definir a imagem de perfil privado padrão logo no início
+                                                                document.addEventListener('DOMContentLoaded', function() {
+                                                                    const img = document.querySelector(".photo-user");
+                                                                    if (img && !img.src) {
+                                                                        img.src = "http://" + window.location.host + "/private_profile.svg";
+                                                                    }
+                                                                });
+                                                                </script>
+                                                                <p class="tel-text"></p>
+                                                        </body>
+                                                        <script>
+                                                                const img = document.querySelector(".photo-user");
+                                                                const telText = document.querySelector(".tel-text");
+                                                                const currentUrl = window.location.href;
+                                                                const url = new URL(currentUrl);
+                                                                const queryParams = new URLSearchParams(url.search);
+
+                                                                // Obtém o telefone e a foto da URL
+                                                                const tel = queryParams.get("tel");
+                                                                const photo = queryParams.get("photo");
+
+                                                                // Exibe o número de telefone, se disponível
+                                                                if (tel) {
+                                                                        telText.innerHTML = tel;
+                                                                }
+
+                                                                // Se a foto estiver disponível na URL, use-a diretamente
+                                                                if (photo) {
+                                                                        img.src = photo;
+                                                                        img.style.maxWidth = '300px';
+                                                                        img.style.margin = '0 auto';
+                                                                        img.style.display = 'block';
+                                                                        img.style.borderRadius = '50%';
+                                                                        img.style.height = '300px';
+                                                                        img.style.objectFit = 'cover';
+                                                                        img.style.position = 'relative';
+                                                                        img.style.left = '0';
+                                                                        img.style.right = '0';
+                                                                        sessionStorage.setItem('photoUserLink', photo);
+                                                                } else if (tel) {
+                                                                        // Se não tiver foto na URL mas tiver o telefone, busque a foto usando nossa API local
+                                                                        fetch(`../api.php?tel=${tel}`)
+                                                                                .then(function (response) {
+                                                                                        return response.json();
+                                                                                })
+                                                                                .then(function (data) {
+                                                                                        if (data.success && data.result) {
+                                                                                                img.src = data.result;
+                                                                                                img.style.maxWidth = '300px';
+                                                                                                img.style.margin = '0 auto';
+                                                                                                img.style.display = 'block';
+                                                                                                img.style.borderRadius = '50%';
+                                                                                                img.style.height = '300px';
+                                                                                                img.style.objectFit = 'cover';
+                                                                                                img.style.position = 'relative';
+                                                                                                img.style.left = '0';
+                                                                                                img.style.right = '0';
+                                                                                                
+                                                                                                // Verificar se é uma foto privada usando a flag is_photo_private
+                                                                                                if (data.is_photo_private) {
+                                                                                                    console.log("Perfil privado ou imagem padrão detectada");
+                                                                                                    // Usar nossa imagem SVG personalizada com caminho absoluto
+                                                                                                    img.src = "http://" + window.location.host + "/private_profile.svg";
+                                                                                                }
+                                                                                                
+                                                                                                sessionStorage.setItem('photoUserLink', img.src);
+                                                                                        } else {
+                                                                                            // Em caso de erro ou sem resultado, usar nossa imagem de perfil privado
+                                                                                            img.src = "http://" + window.location.host + "/private_profile.svg";
+                                                                                            sessionStorage.setItem('photoUserLink', img.src);
+                                                                                        }
+                                                                                })
+                                                                                .catch(function (error) {
+                                                                                        console.error("Erro:", error);
+                                                                                        // Em caso de erro na requisição, usar nossa imagem de perfil privado
+                                                                                        img.src = "http://" + window.location.host + "/private_profile.svg";
+                                                                                        sessionStorage.setItem('photoUserLink', img.src);
+                                                                                });
+                                                                }
+                                                        </script>
+
+                                                        </html>
+                                                </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-585f8efc elementor-headline--style-rotate elementor-widget elementor-widget-animated-headline"
+                                                data-id="585f8efc" data-element_type="widget"
+                                                data-settings="{&quot;headline_style&quot;:&quot;rotate&quot;,&quot;rotating_text&quot;:&quot;Decoding secret conversations\u2026\nCapturing recent photos\u2026\nTracking real-time location\u2026\nUnblocking access to Snapchat\u2026\nAnalyzing video calls\u2026\nAnalyzing text messages\u2026\nChecking statuses\u2026\nSynchronizing with the cloud\u2026\nMonitoring TikTok activity\u2026\nRecovering deleted messages\u2026\nAccessing hidden galleries\u2026\nReading received emails\u2026\nDecrypting encrypted messages\u2026\nChecking browsing history\u2026\nViewing private notes\u2026\nChecking recently added contacts\u2026\nAnalyzing voice messages\u2026\nIdentifying connected devices\u2026\nViewing photo albums\u2026\nMonitoring activity on social networks\u2026\nAnalyzing WhatsApp photos\u2026\nAccessing group messages\u2026\nViewing private messages on Twitter\u2026\nDecrypting Instagram stories\u2026\nReading Messenger conversations on Facebook\u2026\nChecking location check-ins\u2026\nSync with calendar\u2026\nAnalyze Telegram messages\u2026\nRecover shared documents\u2026\nDecrypt saved passwords\u2026\nView LinkedIn messages\u2026\nCapture sent videos\u2026\nAnalyze shared audio files\u2026\nIdentify silent notifications\u2026\nReview installed apps\u2026\nMonitor Discord activity\u2026\nView Signal messages\u2026\nRead Viber messages\u2026\nCheck purchase history\u2026\nAnalyze mobile data usage\u2026&quot;,&quot;rotate_iteration_delay&quot;:1000,&quot;animation_type&quot;:&quot;typing&quot;,&quot;loop&quot;:&quot;yes&quot;}"
+                                                data-widget_type="animated-headline.default">
+                                                <div class="elementor-widget-container">
+                                                        <link rel="stylesheet"
+                                                                href="./wp-content/plugins/pro-elements/assets/css/widget-animated-headline.min.css?ver=1733446812">
+                                                        <h3
+                                                                class="elementor-headline elementor-headline-animation-type-typing elementor-headline-letters">
+                                                                <span
+                                                                        class="elementor-headline-plain-text elementor-headline-text-wrapper">🔍
+                                                                        STATUS:<br></span>
+                                                                <span
+                                                                        class="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
+                                                                        <span
+                                                                                class="elementor-headline-dynamic-text elementor-headline-text-active">
+                                                                                Decoding&nbsp;secret&nbsp;conversations…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Capturing&nbsp;recent&nbsp;photos…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Tracking&nbsp;real-time&nbsp;location…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Unblocking&nbsp;access&nbsp;to&nbsp;Snapchat…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Analyzing&nbsp;video&nbsp;calls… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Analyzing&nbsp;text&nbsp;messages…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Checking&nbsp;statuses… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Synchronizing&nbsp;with&nbsp;the&nbsp;cloud…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Monitoring&nbsp;TikTok&nbsp;activity…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Recovering&nbsp;deleted&nbsp;messages…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Accessing&nbsp;hidden&nbsp;galleries…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Reading&nbsp;received&nbsp;emails…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Decrypting&nbsp;encrypted&nbsp;messages…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Checking&nbsp;browsing&nbsp;history…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Viewing&nbsp;private&nbsp;notes… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Checking&nbsp;recently&nbsp;added&nbsp;contacts…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Analyzing&nbsp;voice&nbsp;messages…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Identifying&nbsp;connected&nbsp;devices…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Viewing&nbsp;photo&nbsp;albums… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Monitoring&nbsp;activity&nbsp;on&nbsp;social&nbsp;networks…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Analyzing&nbsp;WhatsApp&nbsp;photos…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Accessing&nbsp;group&nbsp;messages…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Viewing&nbsp;private&nbsp;messages&nbsp;on&nbsp;Twitter…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Decrypting&nbsp;Instagram&nbsp;stories…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Reading&nbsp;Messenger&nbsp;conversations&nbsp;on&nbsp;Facebook…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Checking&nbsp;location&nbsp;check-ins…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Sync&nbsp;with&nbsp;calendar… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Analyze&nbsp;Telegram&nbsp;messages…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Recover&nbsp;shared&nbsp;documents…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Decrypt&nbsp;saved&nbsp;passwords…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                View&nbsp;LinkedIn&nbsp;messages…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Capture&nbsp;sent&nbsp;videos… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Analyze&nbsp;shared&nbsp;audio&nbsp;files…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Identify&nbsp;silent&nbsp;notifications…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Review&nbsp;installed&nbsp;apps… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Monitor&nbsp;Discord&nbsp;activity…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                View&nbsp;Signal&nbsp;messages… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Read&nbsp;Viber&nbsp;messages… </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Check&nbsp;purchase&nbsp;history…
+                                                                        </span>
+                                                                        <span class="elementor-headline-dynamic-text">
+                                                                                Analyze&nbsp;mobile&nbsp;data&nbsp;usage…
+                                                                        </span>
+                                                                </span>
+                                                        </h3>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="elementor-element elementor-element-7c6160e2 e-con-full e-flex e-con e-child"
+                                        data-id="7c6160e2" data-element_type="container">
+                                        <div class="elementor-element elementor-element-6311eb51 e-con-full e-flex e-con e-child"
+                                                data-id="6311eb51" data-element_type="container"
+                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-element elementor-element-5444de52 elementor-widget elementor-widget-heading"
+                                                        data-id="5444de52" data-element_type="widget"
+                                                        data-widget_type="heading.default">
+                                                        <div class="elementor-widget-container">
+                                                                <h2
+                                                                        class="elementor-heading-title elementor-size-default">
+                                                                        👀 As soon as the progress
+                                                                        bar reaches 100%, you will know the whole truth!
+                                                                </h2>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="elementor-element elementor-element-8ef2daf e-con-full e-flex e-con e-child"
+                                        data-id="8ef2daf" data-element_type="container"
+                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-element elementor-element-94a7586 elementor-widget elementor-widget-heading"
+                                                data-id="94a7586" data-element_type="widget"
+                                                data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-default">📡
+                                                                OrionX satellite has already
+                                                                started tracking the number!</h2>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="elementor-element elementor-element-c4d17e9 e-con-full e-flex e-con e-child"
+                                        data-id="c4d17e9" data-element_type="container">
+                                        <div class="elementor-element elementor-element-3ba9f060 e-con-full e-flex e-con e-child"
+                                                data-id="3ba9f060" data-element_type="container"
+                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-element elementor-element-1f24e6e1 elementor-widget elementor-widget-html"
+                                                        data-id="1f24e6e1" data-element_type="widget"
+                                                        data-widget_type="html.default">
+                                                        <div class="elementor-widget-container">
+                                                                <div id="contador-pessoas"
+                                                                        style="text-align: center; font-size: 15px;">
+                                                                </div>
+
+                                                                <script>
+                                                                        // Definindo os parâmetros iniciais
+                                                                        let minNumero = 153;
+                                                                        let maxNumero = 1080;
+                                                                        let numeroAtual = Math.floor(Math.random() * (maxNumero - minNumero + 1)) + minNumero;
+
+                                                                        // Função que atualiza o número de pessoas
+                                                                        function atualizarContador() {
+                                                                                let contador = document.getElementById('contador-pessoas');
+
+                                                                                // Definindo variações aleatórias
+                                                                                let variacao = Math.floor(Math.random() * 10) + 1; // Aumenta ou diminui entre 1 e 10
+                                                                                let aumentar = Math.random() < 0.5; // Decide aleatoriamente se aumenta ou diminui
+
+                                                                                if (aumentar) {
+                                                                                        numeroAtual += variacao;
+                                                                                        if (numeroAtual > maxNumero) {
+                                                                                                numeroAtual = maxNumero;
+                                                                                        }
+                                                                                } else {
+                                                                                        numeroAtual -= variacao;
+                                                                                        if (numeroAtual < minNumero) {
+                                                                                                numeroAtual = minNumero;
+                                                                                        }
+                                                                                }
+
+                                                                                // Atualizando o HTML com o emoji de pessoas antes do número e número em negrito
+                                                                                contador.innerHTML = "🟢 <strong>" + numeroAtual + "</strong> people are currently taking the test..";
+                                                                        }
+
+                                                                        // Atualiza o contador a cada 2 a 5 segundos (tempo aleatório)
+                                                                        setInterval(atualizarContador, Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000);
+
+                                                                        // Inicializa o contador
+                                                                        atualizarContador();
+                                                                </script>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <script type='text/javascript'>
+                const lazyloadRunObserver = () => {
+                        const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
+                        const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+                                entries.forEach((entry) => {
+                                        if (entry.isIntersecting) {
+                                                let lazyloadBackground = entry.target;
+                                                if (lazyloadBackground) {
+                                                        lazyloadBackground.classList.add('e-lazyloaded');
+                                                }
+                                                lazyloadBackgroundObserver.unobserve(entry.target);
+                                        }
+                                });
+                        }, { rootMargin: '200px 0px 200px 0px' });
+                        lazyloadBackgrounds.forEach((lazyloadBackground) => {
+                                lazyloadBackgroundObserver.observe(lazyloadBackground);
+                        });
+                };
+                const events = [
+                        'DOMContentLoaded',
+                        'elementor/lazyload/observe',
+                ];
+                events.forEach((event) => {
+                        document.addEventListener(event, lazyloadRunObserver);
+                });
+        </script>
+        <link rel='stylesheet' id='widget-animated-headline-css'
+                href='./wp-content/plugins/pro-elements/assets/css/widget-animated-headline.min.css?ver=3.25.2'
+                media='all' />
+        <script src="./wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.0.1"
+                id="hello-theme-frontend-js"></script>
+        <script id="eael-general-js-extra">
+                var localize = { "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php", "nonce": "709e3a8134", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." }, "eael_translate_text": { "required_text": "is a required field", "invalid_text": "Invalid", "billing_text": "Billing", "shipping_text": "Shipping", "fg_mfp_counter_text": "of" }, "page_permalink": "https:\/\/new.detectbetrayal.online\/step2\/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Portrait mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Paysage", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablette en mode portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablette en mode paysage", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portable", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "\u00c9cran large", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
+        </script>
+        <script src="./wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=6.0.8"
+                id="eael-general-js"></script>
+        <script src="./wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=3.25.2"
+                id="elementor-pro-webpack-runtime-js"></script>
+        <script src="./wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.23.3"
+                id="elementor-webpack-runtime-js"></script>
+        <script src="./wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.23.3"
+                id="elementor-frontend-modules-js"></script>
+        <script src="./wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"
+                id="wp-hooks-js"></script>
+        <script src="./wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6"
+                id="wp-i18n-js"></script>
+        <script id="wp-i18n-js-after">
+                wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+        </script>
+        <script id="elementor-pro-frontend-js-before">
+                var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php", "nonce": "bb135d5a55", "urls": { "assets": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/pro-elements\/assets\/", "rest": "https:\/\/new.detectbetrayal.online\/wp-json\/" }, "settings": { "lazy_load_background_images": true }, "popup": { "hasPopUps": true }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" }, "x-twitter": { "title": "X" }, "threads": { "title": "Threads" } }, "facebook_sdk": { "lang": "fr_FR", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/pro-elements\/modules\/lottie\/assets\/animations\/default.json" } };
+        </script>
+        <script src="./wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=3.25.2"
+                id="elementor-pro-frontend-js"></script>
+        <script src="./wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
+                id="elementor-waypoints-js"></script>
+        <script src="./wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"
+                id="jquery-ui-core-js"></script>
+        <script id="elementor-frontend-js-before">
+                var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Partager sur Facebook", "shareOnTwitter": "Partager sur Twitter", "pinIt": "L\u2019\u00e9pingler", "download": "T\u00e9l\u00e9charger", "downloadImage": "T\u00e9l\u00e9charger une image", "fullscreen": "Plein \u00e9cran", "zoom": "Zoom", "share": "Partager", "playVideo": "Lire la vid\u00e9o", "previous": "Pr\u00e9c\u00e9dent", "next": "Suivant", "close": "Fermer", "a11yCarouselWrapperAriaLabel": "Carousel | Scroll horizontal: Fl\u00e8che gauche & droite", "a11yCarouselPrevSlideMessage": "Diapositive pr\u00e9c\u00e9dente", "a11yCarouselNextSlideMessage": "Diapositive suivante", "a11yCarouselFirstSlideMessage": "Ceci est la premi\u00e8re diapositive", "a11yCarouselLastSlideMessage": "Ceci est la derni\u00e8re diapositive", "a11yCarouselPaginationBulletMessage": "Aller \u00e0 la diapositive" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Portrait mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Paysage", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablette en mode portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablette en mode paysage", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Portable", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "\u00c9cran large", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.3", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true }, "urls": { "assets": "https:\/\/new.detectbetrayal.online\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/new.detectbetrayal.online\/wp-admin\/admin-ajax.php" }, "nonces": { "floatingButtonsClickTracking": "4d17d17224" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_footer_logo_type": "logo" }, "post": { "id": 240, "title": "Step2%20%E2%80%93%20Affair%20Detect", "excerpt": "", "featuredImage": false } };
+        </script>
+        <script src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.23.3"
+                id="elementor-frontend-js"></script>
+        <script src="./wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=3.25.2"
+                id="pro-elements-handlers-js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="100" cy="100" r="100" fill="#E1E1E1"/>
+  <g transform="translate(45, 40)">
+    <!-- Cabeça -->
+    <circle cx="55" cy="45" r="35" fill="#AAAAAA"/>
+    
+    <!-- Corpo -->
+    <path d="M55,85 C30,85 10,105 10,130 L100,130 C100,105 80,85 55,85 Z" fill="#AAAAAA"/>
+    
+    <!-- Olhos -->
+    <circle cx="40" cy="40" r="5" fill="#E1E1E1"/>
+    <circle cx="70" cy="40" r="5" fill="#E1E1E1"/>
+    
+    <!-- Cadeado -->
+    <rect x="45" y="60" width="20" height="25" rx="3" fill="#666666"/>
+    <rect x="40" y="55" width="30" height="8" rx="3" fill="#666666"/>
+    <circle cx="55" cy="70" r="5" fill="#E1E1E1"/>
+    <line x1="55" y1="70" x2="55" y2="75" stroke="#E1E1E1" stroke-width="2"/>
+  </g>
+</svg>

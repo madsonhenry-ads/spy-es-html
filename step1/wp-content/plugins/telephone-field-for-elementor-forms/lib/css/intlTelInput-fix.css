@@ -1,0 +1,37 @@
+/* 
+ * Este arquivo corrige o problema de múltiplas bandeiras aparecendo para um único país
+ * na Hostinger e outros ambientes de hospedagem
+ */
+
+/* Ajustes para evitar duplicação */
+.iti__flag-container {
+  /* Garante que apenas um conjunto de bandeiras seja exibido */
+  z-index: 100 !important;
+}
+
+/* Evita que o container inteiro duplique */
+.iti:not(:first-child) {
+  display: none !important;
+}
+
+/* Garante que apenas um dropdown de bandeiras seja exibido */
+.iti__country-list {
+  z-index: 101 !important;
+}
+
+/* Remove espaçamentos adicionais que podem causar problemas */
+.elementor-field-type-telephone .iti {
+  width: 100% !important;
+}
+
+/* Verifica que não há sobreposição de bandeiras */
+.iti__flag {
+  background-image: url("../img/flags.png") !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../img/flags@2x.png") !important;
+  }
+}
